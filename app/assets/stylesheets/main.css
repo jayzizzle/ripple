@@ -8,5 +8,30 @@ body {
 }
 
 h1 {
+  padding: 5px 0px;
   font-size: 28px;
+}
+
+h3 {
+  padding: 5px 0px;
+  font-size: 14px;
+}
+
+.input-text {
+  background: transparent;
+  padding: 5px 0px;
+  margin: 5px 0px;
+  border: none;
+  border-bottom: 1px solid lightslategray;
+  color: #fff;
+}
+
+.input-text:focus {
+  outline: none;
+  border-bottom: 1px solid cyan;
+  transition: 0.5s;
+}
+
+label {
+  font-size: 14px;
 }
