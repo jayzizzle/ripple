@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 body {
   background-color: #1a1a1a;
   color: #fff;
   font-family: 'Roboto', sans-serif;
-  margin: 20px;
+  background: linear-gradient(215deg,#171d26 15%,#000 85%) no-repeat 50% fixed;
 }
 
 h1 {
@@ -12,9 +13,45 @@ h1 {
   font-size: 28px;
 }
 
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  color: #666;
+  letter-spacing: 5px;
+  padding: 20px;
+}
+
 h3 {
-  padding: 5px 0px;
-  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 40px;
+  font-size: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c2026;
+  padding: 50px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  background-color: cyan;
+  border: 0;
+  border-radius: 2px;
+  margin-top: 5px;
+  padding: 15px 0px;
+  color: #333;
+}
+
+button:hover {
+  background-color: darkcyan;
+  transition: 0.5s;
 }
 
 .input-text {
@@ -24,6 +61,9 @@ h3 {
   border: none;
   border-bottom: 1px solid lightslategray;
   color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  width: 300px;
 }
 
 .input-text:focus {
@@ -32,6 +72,38 @@ h3 {
   transition: 0.5s;
 }
 
+::placeholder {
+  color: #555;
+  opacity: 1;
+}
+:-ms-input-placeholder {color: #555;}
+::-ms-input-placeholder {color: #555;}
+
 label {
-  font-size: 14px;
+  font-size: 12px;
+  color: #ccc;
+  font-weight: bolder;
+}
+
+.error {
+  font-size: 12px;
+  color: red;
+  padding-top: 20px;
+}
+
+.flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.session-form {
+  padding-top: 100px;
 }
