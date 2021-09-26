@@ -11,8 +11,11 @@ import {
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
+import HeaderNav from './splash/header_nav';
+
 const App = () => (
   <div>
+    <HeaderNav />
     <Switch>
       <AuthRoute exact path='/login' component={LoginFormContainer} />
       <AuthRoute exact path='/signup' component={SignupFormContainer} />

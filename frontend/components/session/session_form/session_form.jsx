@@ -83,7 +83,7 @@ class SessionForm extends React.Component {
               />
             </label>
             <br />
-            <button>{formType}</button>
+            <button className='btn-session-form'>{formType}</button>
             {this.renderErrors()}
           </form>
         </div>
