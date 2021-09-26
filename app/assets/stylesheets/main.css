@@ -6,6 +6,8 @@ body {
   color: #fff;
   font-family: 'Roboto', sans-serif;
   background: linear-gradient(215deg,#171d26 15%,#000 85%) no-repeat 50% fixed;
+  position: relative;
+  height: 100vh;
 }
 
 h1 {
@@ -16,7 +18,7 @@ h1 {
 h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
-  color: #666;
+  color: #888;
   letter-spacing: 5px;
   padding: 20px;
 }
@@ -27,19 +29,38 @@ h3 {
   font-size: 20px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.session-form-wrapper {
   background-color: #1c2026;
+  width: 300px;
   padding: 50px;
   border-radius: 5px;
-  width: 300px;
+  background-color: #1c2026;
+}
+
+a.session-links {
+  font-family: 'Montserrat', sans-serif;
+  padding: 40px 10px;
+  font-size: 18px;
+  color: #666;
+}
+
+a.session-links:hover {
+  color: #fff;
+  transition: 0.5s;
+}
+
+a.session-links-active {
+  color: #fff;
+}
+
+.text-small {
+  font-size: 14px;
+  padding: 30px;
 }
 
 .btn-session-form {
   font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
   width: 100%;
   background-color: cyan;
   border: 0;
@@ -51,6 +72,45 @@ form {
 
 .btn-session-form:hover {
   background-color: darkcyan;
+  transition: 0.5s;
+}
+
+.fa-key {
+  position: absolute;
+  left: 20px;
+  font-size: 18px;
+}
+
+.btn-outline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 15px 0px;
+  color: white;
+  background-color: transparent;
+  position: relative;
+}
+
+.btn-outline:hover {
+  background-color: #666;
+  transition: 0.5s;
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 20px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.btn-white:hover {
+  background-color: #ccc;
   transition: 0.5s;
 }
 
@@ -86,7 +146,7 @@ label {
 }
 
 .error {
-  font-size: 12px;
+  font-size: 16px;
   color: red;
   padding-top: 20px;
 }

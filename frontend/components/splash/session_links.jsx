@@ -7,7 +7,9 @@ class SessionLinks extends React.Component {
     return (
       <div className='flex-row-center'>
         <Link to='/login'>Log In</Link>
-        <Link to='/signup' className='btn-free-trial'>Start Free Trial</Link>
+        <Link to='/signup'>
+          <button className='btn-white'>Start Free Trial</button>
+        </Link>
       </div>
     )
   }

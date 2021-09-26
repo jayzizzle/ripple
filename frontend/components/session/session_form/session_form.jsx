@@ -1,4 +1,6 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import GuestLoginForm from './guest_login_form';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -56,36 +58,42 @@ class SessionForm extends React.Component {
       <div className='flex-row-center'>
         <div className='flex-col-center session-form'>
           <h2>RIPPLE</h2>
-          <h3>{formType}</h3>
-          <form onSubmit={this.handleSubmit}>
-            <label>Enter Username
+          <div className='flex-row-center'>
+            <NavLink to='/signup' exact className='session-links' activeClassName='session-links-active'>Sign Up</NavLink>
+            <NavLink to='/login'exact className='session-links' activeClassName='session-links-active'>Log In</NavLink>
+          </div>
+          <div className='session-form-wrapper'>
+            <form onSubmit={this.handleSubmit} className='flex-col-center'>
+              <label>Enter Username
+                <br />
+                <input 
+                  type='text' 
+                  placeholder='Enter Username'
+                  value={this.state.username} 
+                  onChange={this.update('username')}
+                  autoComplete='username'
+                  className='input-text'
+                />
+              </label>
               <br />
-              <input 
-                type='text' 
-                placeholder='Enter Username'
-                value={this.state.username} 
-                onChange={this.update('username')}
-                autoComplete='username'
-                className='input-text'
-              />
-            </label>
-            <br />
-            {formType === 'Sign Up' ? this.renderEmailInput() : null}
-            <label>Enter Password
+              {formType === 'Sign Up' ? this.renderEmailInput() : null}
+              <label>Enter Password
+                <br />
+                <input 
+                  type='password' 
+                  placeholder='Enter Password'
+                  value={this.state.password} 
+                  onChange={this.update('password')} 
+                  autoComplete={ formType === 'Sign Up' ? 'new-password' : 'current-password' }
+                  className='input-text'
+                />
+              </label>
               <br />
-              <input 
-                type='password' 
-                placeholder='Enter Password'
-                value={this.state.password} 
-                onChange={this.update('password')} 
-                autoComplete={ formType === 'Sign Up' ? 'new-password' : 'current-password' }
-                className='input-text'
-              />
-            </label>
-            <br />
-            <button className='btn-session-form'>{formType}</button>
-            {this.renderErrors()}
-          </form>
+              <button className='btn-session-form'>{formType}</button>
+              {this.renderErrors()}
+            </form>
+            <GuestLoginForm />
+          </div>
         </div>
       </div>
     )
