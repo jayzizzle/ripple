@@ -1,14 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux'; 
 import SessionLinks from './session_links';
+import { Link } from 'react-router-dom';
 
 class HeaderNav extends React.Component {
   render() {
     const { isLoggedIn, logout } = this.props;
     return(
       <header className='flex-row-between'>
-        <h2>RIPPLE</h2>
-        {/* <NavBar /> */}
+        <Link to='/'>
+          <h2>RIPPLE</h2>
+        </Link>
         <SessionLinks isLoggedIn={isLoggedIn} logout={logout} />
       </header>
     )

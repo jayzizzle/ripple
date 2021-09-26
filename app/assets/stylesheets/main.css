@@ -6,8 +6,14 @@ body {
   color: #fff;
   font-family: 'Roboto', sans-serif;
   background: linear-gradient(215deg,#171d26 15%,#000 85%) no-repeat 50% fixed;
+  /* position: relative; */
+  /* height: 100vh; */
+}
+
+.full-wrapper {
   position: relative;
-  height: 100vh;
+  width: 100vw;
+  height:100vh;
 }
 
 h1 {
@@ -29,12 +35,21 @@ h3 {
   font-size: 20px;
 }
 
+.nav-bar-links:hover {
+  color: cyan;
+  transition: 0.5s;
+}
+
 .session-form-wrapper {
   background-color: #1c2026;
   width: 300px;
   padding: 50px;
   border-radius: 5px;
   background-color: #1c2026;
+}
+
+.session-form {
+  padding-top: 100px;
 }
 
 a.session-links {
@@ -54,7 +69,7 @@ a.session-links-active {
 }
 
 .text-small {
-  font-size: 14px;
+  font-size: 12px;
   padding: 30px;
 }
 
@@ -96,6 +111,22 @@ a.session-links-active {
 .btn-outline:hover {
   background-color: #666;
   transition: 0.5s;
+}
+
+.footer-wrapper {
+  width: 100%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 95%;
+  border-top: 1px solid #1a1a1a;
+  color: #aaa;
+}
+
+.footer-links {
+  padding: 0px 10px;
 }
 
 .btn-white {
@@ -168,8 +199,4 @@ label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.session-form {
-  padding-top: 100px;
 }

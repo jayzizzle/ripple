@@ -6,7 +6,7 @@ class SessionLinks extends React.Component {
     const { isLoggedIn, logout } = this.props;
     return (
       <div className='flex-row-center'>
-        <Link to='/login'>Log In</Link>
+        <Link to='/login' className='nav-bar-links'>Log In</Link>
         <Link to='/signup'>
           <button className='btn-white'>Start Free Trial</button>
         </Link>
