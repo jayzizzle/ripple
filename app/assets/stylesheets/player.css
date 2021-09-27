@@ -1,0 +1,6 @@
+.player-container {
+  background-color: #1c2026;
+  position: fixed;
+  bottom: 0;
+  height: 200px;
+}
