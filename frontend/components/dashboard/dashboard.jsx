@@ -6,7 +6,7 @@ const Dashboard = () => (
   <>
     <h1>Dashboard</h1>
     <LogOutButton />
-    <Player />
+    {/* <Player /> */}
   </>
 )
 
