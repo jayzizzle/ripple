@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import FreeTrialButton from './free_trial_button';
 
 class SessionLinks extends React.Component {
   render() {
@@ -7,9 +8,7 @@ class SessionLinks extends React.Component {
     return (
       <div className='flex-row-center'>
         <Link to='/login' className='nav-bar-links'>Log In</Link>
-        <Link to='/signup'>
-          <button className='btn-white'>Start Free Trial</button>
-        </Link>
+        <FreeTrialButton styleClass='btn-white'/>
       </div>
     )
   }
