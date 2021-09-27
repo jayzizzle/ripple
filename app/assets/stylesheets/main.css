@@ -6,19 +6,18 @@ body {
   color: #fff;
   font-family: 'Roboto', sans-serif;
   background: linear-gradient(215deg,#171d26 15%,#000 85%) no-repeat 50% fixed;
-  /* position: relative; */
-  /* height: 100vh; */
 }
 
 .full-wrapper {
   position: relative;
   width: 100vw;
-  height:100vh;
+  /* height:100vh; */
 }
 
 h1 {
-  padding: 5px 0px;
-  font-size: 28px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 72px;
+  padding: 30px;
 }
 
 h2 {
@@ -33,6 +32,20 @@ h3 {
   font-family: 'Montserrat', sans-serif;
   padding: 40px;
   font-size: 20px;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.hero {
+  height: 100vh;
+  background-image: url('splash_spidergwen.jpg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
 }
 
 .nav-bar-links:hover {
@@ -122,7 +135,7 @@ footer {
   bottom: 0;
   width: 95%;
   border-top: 1px solid #1a1a1a;
-  color: #aaa;
+  color: #ccc;
 }
 
 .footer-links {
@@ -199,4 +212,11 @@ label {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.flex-col-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
