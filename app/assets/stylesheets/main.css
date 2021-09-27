@@ -12,6 +12,7 @@ body {
 .full-wrapper {
   position: relative;
   width: 100vw;
+  height: 100vh;
 }
 
 h1 {
@@ -154,6 +155,9 @@ a.session-links-active {
 footer {
   position: fixed;
   bottom: 0;
+}
+
+.session-footer {
   width: 95%;
   border-top: 1px solid #1a1a1a;
   color: #ccc;

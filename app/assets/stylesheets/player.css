@@ -1,6 +1,41 @@
-.player-container {
+.player-footer {
   background-color: #1c2026;
-  position: fixed;
-  bottom: 0;
-  height: 200px;
+  height: 100px;
+  width: 100%;
+}
+
+.player-side {
+  width: 25%;
+}
+
+.player-ui {
+  width: 50%;
+}
+
+.player-controls {
+  display: flex;
+  align-items: flex-start;
+}
+
+.player-track-info {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.player-side-controls {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fas {
+  font-size: 18px;
+  padding: 0px 10px;
+}
+
+.step {
+  font-size: 22px;
+}
+
+.fa-play, .fa-pause {
+  font-size: 28px;
 }

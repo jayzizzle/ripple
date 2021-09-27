@@ -5,7 +5,7 @@ class SessionFooter extends React.Component {
   render() {
     return(
       <div className='flex-row-center'>
-        <footer className='flex-row-between text-small'>
+        <footer className='flex-row-between session-footer text-small'>
           <p>© 2021 Jon Zamora JZ</p>
           <ul className='flex-row-center'>
             <li className='footer-links'>
