@@ -39,6 +39,8 @@ class Player extends React.Component {
           <div className='play-pause'>
             <i className='material-icons'>play_arrow</i>
           </div>
+          <i id='next' className='material-icons'>skip_next</i>
+          <i id='more-music' className='material-icons'>queue_music</i>
         </div>
 
       </div>

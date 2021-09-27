@@ -5,10 +5,12 @@ import FreeTrialButton from './free_trial_button';
 class SessionLinks extends React.Component {
   render() {
     const { isLoggedIn, logout } = this.props;
+    let nextPage;
+    isLoggedIn ? (nextPage = '/dashboard') : (nextPage = '/signup');
     return (
       <div className='flex-row-center'>
-        <Link to='/login' className='nav-bar-links'>Log In</Link>
-        <FreeTrialButton styleClass='btn-white'/>
+        <Link to={nextPage} className='nav-bar-links'>Log In</Link>
+        <FreeTrialButton styleClass='btn-white' isLoggedIn={isLoggedIn} />
       </div>
     )
   }

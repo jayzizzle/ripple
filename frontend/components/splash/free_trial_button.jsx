@@ -3,8 +3,9 @@ import { useHistory } from 'react-router-dom';
 
 const FreeTrialButton = (props) => {
   const history = useHistory();
-  const handleClick = () => (history.push('/signup'))
-  
+  let nextPage;
+  props.isLoggedIn ? (nextPage = '/dashboard') : (nextPage = '/signup');
+  const handleClick = () => (history.push(nextPage));
   return (
     <button className={props.styleClass} onClick={handleClick}>
       Start Free Trial

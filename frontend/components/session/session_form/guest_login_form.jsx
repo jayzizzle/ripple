@@ -10,7 +10,8 @@ class GuestLoginForm extends React.Component {
 
   handleGuestLogin(e) {
     e.preventDefault();
-    this.props.login(this.props.guest);
+    this.props.login(this.props.guest)
+      .then(() => this.props.history.push('/dashboard'));
     console.log('this worked');
   }
 

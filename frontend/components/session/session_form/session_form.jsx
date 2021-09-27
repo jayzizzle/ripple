@@ -101,7 +101,7 @@ class SessionForm extends React.Component {
                 <button className='btn-session-form'>{formType}</button>
                 {this.renderErrors()}
               </form>
-              <GuestLoginForm />
+              <GuestLoginForm history={this.props.history} />
             </div>
           </div>
         </div>
