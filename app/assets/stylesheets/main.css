@@ -25,7 +25,7 @@ h2 {
   font-size: 24px;
   color: #888;
   letter-spacing: 5px;
-  padding: 20px;
+  padding: 50px;
 }
 
 h3 {
@@ -46,7 +46,6 @@ header {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  /* padding-left: 150px; */
   padding-left: 7%;
   font-size: 20px;
   text-shadow: 3px 3px 5px #000;
@@ -169,7 +168,7 @@ footer {
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
-  margin: 20px;
+  margin: 20px 50px 20px 20px;
   font-weight: 500;
   font-size: 16px;
 }
