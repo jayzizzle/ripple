@@ -24,5 +24,4 @@ const App = () => (
   </div>
 );
 
-//Export App
 export default App;
