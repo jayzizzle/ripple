@@ -11,7 +11,7 @@ body {
 
 .full-wrapper {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 
@@ -85,6 +85,7 @@ header {
 
 .session-form {
   padding-top: 100px;
+  padding-bottom: 150px;
 }
 
 a.session-links {
@@ -149,15 +150,18 @@ a.session-links-active {
 }
 
 .footer-wrapper {
-  width: 100%;
+  width: 95%;
 }
 
 footer {
   position: fixed;
   bottom: 0;
+  z-index: 10;
+  overflow: hidden;
 }
 
 .session-footer {
+  background-color: #000;
   width: 95%;
   border-top: 1px solid #1a1a1a;
   color: #ccc;
