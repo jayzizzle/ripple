@@ -1,5 +1,6 @@
 import React from 'react';
 import TogglePlayPause from './toggle_play_pause';
+import PlayerTrackInfo from './player_track_info';
 
 
 class Player extends React.Component {
@@ -7,71 +8,78 @@ class Player extends React.Component {
     super(props);
 
     this.isPlaying = this.isPlaying.bind(this);
-    this.loadSong = this.loadSong.bind(this);
-    this.playSong = this.playSong.bind(this);
-    this.pauseSong = this.pauseSong.bind(this);
-    this.prevSong = this.prevSong.bind(this);
-    this.nextSong = this.nextSong.bind(this);
+    this.loadTrack = this.loadTrack.bind(this);
+    this.playTrack = this.playTrack.bind(this);
+    this.pauseTrack = this.pauseTrack.bind(this);
+    this.prevTrack = this.prevTrack.bind(this);
+    this.nextTrack = this.nextTrack.bind(this);
 
-    this.songs = [
-      {id: 1, artist: 'Jenevieve', title: 'Resume', audioPath: '/assets/jenevieve-resume.mp3', cover: 'jenevieve-division'}, 
-      {id: 2, artist: 'Mahalia', title: 'Surprise Me', audioPath: '/assets/mahalia-surprise_me.mp3', cover: 'mahalia-seasons'},
-      {id: 3, artist: 'Brasstracks', title: 'My Boo', audioPath: '/assets/brasstracks-my_boo.mp3', cover:'brasstracks-my_boo'}
+    this.tracks = [
+      {id: 1, artist: 'Jenevieve', title: 'Resume', audioPath: '/assets/jenevieve-resume.mp3', cover: '/assets/jenevieve-division.jpg'}, 
+      {id: 2, artist: 'Mahalia', title: 'Surprise Me', audioPath: '/assets/mahalia-surprise_me.mp3', cover: '/assets/mahalia-seasons.jpg'},
+      {id: 3, artist: 'Brasstracks', title: 'My Boo', audioPath: '/assets/brasstracks-my_boo.mp3', cover:'/assets/brasstracks-my_boo.jpg'}
     ];
 
-    this.songIndex = 0;
+    this.trackIndex = 0;
     
-    this.audio = new Audio(this.songs[0].audioPath);
+    this.audio = new Audio(this.tracks[0].audioPath);
     this.audio.volume = 0.5;
+  }
+
+  shouldComponentUpdate() {
+    return true;
   }
 
   isPlaying() {
     return !this.audio.paused;
-    // this.audio.paused && this.audio.currentTime > 0
   }
 
-  loadSong(song) {
-    this.audio.src = song.audioPath;
+  loadTrack(track) {
+    this.audio.src = track.audioPath;
   }
   
-  playSong() {
+  playTrack() {
     this.audio.play();
   }
 
-  pauseSong() {
+  pauseTrack() {
     this.audio.pause();
   }
 
-  prevSong() {
+  prevTrack() {
     const wasPlaying = this.isPlaying();
     if (this.audio.currentTime > 3) {
       this.audio.currentTime = 0;
     } else {
-      this.songIndex--;
-      if (this.songIndex < 0) {
-        this.songIndex = this.songs.length - 1;
+      this.trackIndex--;
+      if (this.trackIndex < 0) {
+        this.trackIndex = this.tracks.length - 1;
       }
-      this.loadSong(this.songs[this.songIndex]);
-      if (wasPlaying) { this.playSong()};
+      this.loadTrack(this.tracks[this.trackIndex]);
+      if (wasPlaying) { this.playTrack()};
     }
   }
 
-  nextSong() {
+  nextTrack() {
     const wasPlaying = this.isPlaying();
-    this.songIndex++;
-    if (this.songIndex > this.songs.length - 1) {
-      this.songIndex = 0;
+    this.trackIndex++;
+    if (this.trackIndex > this.tracks.length - 1) {
+      this.trackIndex = 0;
     }
-    this.loadSong(this.songs[this.songIndex]);
-    if (wasPlaying) { this.playSong()};
+    this.loadTrack(this.tracks[this.trackIndex]);
+    if (wasPlaying) { this.playTrack()};
   }
 
   render() {
+    const { artist, title, cover } = this.tracks[this.trackIndex]
     return(
       <footer className='player-footer flex-row-between'>
-        <div className='player-track-info player-side'>
-          <h2>RIPPLE</h2>
-        </div>
+        
+        <PlayerTrackInfo 
+          cover={cover} 
+          title={title} 
+          artist={artist} 
+        />
 
         <div className='player-ui flex-col-center'>
           <div className='progress'>
@@ -83,13 +91,13 @@ class Player extends React.Component {
               <i className="fas fa-random"></i>
             </button>
 
-            <button className='player-button' onClick={() => this.prevSong()}>
+            <button className='player-button' onClick={() => this.prevTrack()}>
               <i className="fas fa-step-backward step"></i>
             </button>
 
-            <TogglePlayPause playSong={this.playSong} pauseSong={this.pauseSong}/>
+            <TogglePlayPause playTrack={this.playTrack} pauseTrack={this.pauseTrack}/>
 
-            <button className='player-button' onClick={() => this.nextSong()}>
+            <button className='player-button' onClick={() => this.nextTrack()}>
               <i className="fas fa-step-forward step"></i>
             </button>
 

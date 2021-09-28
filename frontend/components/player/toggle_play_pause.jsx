@@ -4,17 +4,17 @@ class TogglePlayPause extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isPlaying: false };
-    this.playSong = this.props.playSong;
-    this.pauseSong = this.props.pauseSong;
+    this.playTrack = this.props.playTrack;
+    this.pauseTrack = this.props.pauseTrack;
     this.playPause = this.playPause.bind(this);
   }
 
   playPause() {
     let isPlaying = this.state.isPlaying;
     if (isPlaying) {
-      this.pauseSong();
+      this.pauseTrack();
     } else {
-      this.playSong();
+      this.playTrack();
     }
     this.setState({ isPlaying: !isPlaying });
   };
