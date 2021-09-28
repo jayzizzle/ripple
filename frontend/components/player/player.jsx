@@ -30,17 +30,25 @@ class Player extends React.Component {
 
           </div>
           <div className='player-controls flex-row-center'>
-            <i className="fas fa-random"></i>
-            <i className="fas fa-step-backward step"></i>
 
-            {/* <span id='play-pause' onClick={()=> this.playSong()}>
-              <i id='play' className="fas fa-play"></i>
-            </span> */}
+            <button className='player-button'>
+              <i className="fas fa-random"></i>
+            </button>
+
+            <button className='player-button'>
+              <i className="fas fa-step-backward step"></i>
+            </button>
 
             <TogglePlayPause playSong={this.playSong} pauseSong={this.pauseSong}/>
 
-            <i className="fas fa-step-forward step"></i>
-            <i className="fas fa-redo"></i>
+            <button className='player-button'>
+              <i className="fas fa-step-forward step"></i>
+            </button>
+
+            <button className='player-button'>
+              <i className="fas fa-redo"></i>
+            </button>
+
           </div>
         </div>
 

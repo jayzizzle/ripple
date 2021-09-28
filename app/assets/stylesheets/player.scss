@@ -12,6 +12,25 @@
   width: 50%;
 }
 
+.player-button {
+  border:none;
+  width: 28px;
+  padding: 5px 0px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #1c2026;
+  color: white;
+}
+
+.player-button:hover {
+  color: #777;
+  transition: 0.4s;
+}
+
+.play-pause-button {
+  width: 42px;
+}
+
 .player-track-info {
   display: flex;
   justify-content: flex-start;
@@ -24,11 +43,7 @@
 
 .fas {
   font-size: 16px;
-  padding: 0px 10px;
-}
-
-.fas:hover {
-  cursor: pointer;
+  // padding: 0px 10px;
 }
 
 .step {

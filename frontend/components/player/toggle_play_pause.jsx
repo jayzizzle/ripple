@@ -24,9 +24,9 @@ class TogglePlayPause extends React.Component {
     let toggle;
     isPlaying ? (toggle = 'pause') : (toggle = 'play')
     return(
-      <span id='play-pause' onClick={()=> this.playPause()}>
+      <button className='player-button play-pause-button' onClick={()=> this.playPause()}>
         <i id='play' className={`fas fa-${toggle}`}></i>
-      </span>
+      </button>
     ) 
   }
 }
