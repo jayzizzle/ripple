@@ -12,11 +12,6 @@
   width: 50%;
 }
 
-.player-controls {
-  display: flex;
-  align-items: flex-start;
-}
-
 .player-track-info {
   display: flex;
   justify-content: flex-start;
@@ -28,14 +23,14 @@
 }
 
 .fas {
-  font-size: 18px;
+  font-size: 16px;
   padding: 0px 10px;
 }
 
 .step {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .fa-play, .fa-pause {
-  font-size: 28px;
+  font-size: 24px;
 }

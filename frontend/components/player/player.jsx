@@ -13,7 +13,7 @@ class Player extends React.Component {
           <div className='progress'>
 
           </div>
-          <div player-controls flex-row-center>
+          <div className='player-controls flex-row-center'>
             <i className="fas fa-random"></i>
             <i className="fas fa-step-backward step"></i>
 
