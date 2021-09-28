@@ -12,7 +12,6 @@ class GuestLoginForm extends React.Component {
     e.preventDefault();
     this.props.login(this.props.guest)
       .then(() => this.props.history.push('/dashboard'));
-    console.log('this worked');
   }
 
   render() {
