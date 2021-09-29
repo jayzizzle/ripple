@@ -33,7 +33,7 @@ class Player extends React.Component {
   }
 
   shouldComponentUpdate() {
-    return true;
+    return false;
   }
 
   isPlaying() {
@@ -89,6 +89,13 @@ class Player extends React.Component {
 
         <div className='player-ui flex-col-center'>
           <ProgressBar audio={this.audio} />
+
+          {/* <div className='progress-container'>
+            <div className='progress'>
+
+            </div>
+          </div> */}
+
           <div className='player-controls flex-row-center'>
 
             <button className='player-button'>

@@ -10,10 +10,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_24_212130) do
+ActiveRecord::Schema.define(version: 2021_09_29_183434) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "albums", force: :cascade do |t|
+    t.string "title", null: false
+    t.integer "artist_id", null: false
+    t.string "type", null: false
+    t.integer "year", null: false
+    t.boolean "is_explicit", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["artist_id"], name: "index_albums_on_artist_id"
+  end
+
+  create_table "artists", force: :cascade do |t|
+    t.string "artist_name", null: false
+    t.text "bio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["artist_name"], name: "index_artists_on_artist_name"
+  end
+
+  create_table "playlists", force: :cascade do |t|
+    t.string "title", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_playlists_on_user_id"
+  end
+
+  create_table "tracks", force: :cascade do |t|
+    t.string "title", null: false
+    t.integer "artist_id", null: false
+    t.integer "album_id", null: false
+    t.integer "num", null: false
+    t.integer "seconds", null: false
+    t.boolean "is_interlude", default: false, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["album_id"], name: "index_tracks_on_album_id"
+    t.index ["artist_id"], name: "index_tracks_on_artist_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
