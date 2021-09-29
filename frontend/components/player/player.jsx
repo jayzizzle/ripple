@@ -2,6 +2,8 @@ import React from 'react';
 import TogglePlayPause from './toggle_play_pause';
 import PlayerTrackInfo from './player_track_info';
 import VolumeSlider from './volume_slider';
+import ProgressBar from './progress_bar';
+import { convertDuration } from '../../util/helper_util';
 
 class Player extends React.Component {
   constructor(props) {
@@ -26,8 +28,12 @@ class Player extends React.Component {
     this.audio.volume = 0.5;
   }
 
+  componentDidMount() {
+    this.audio.addEventListener('ended', this.nextTrack)
+  }
+
   shouldComponentUpdate() {
-    return false;
+    return true;
   }
 
   isPlaying() {
@@ -56,7 +62,7 @@ class Player extends React.Component {
         this.trackIndex = this.tracks.length - 1;
       }
       this.loadTrack(this.tracks[this.trackIndex]);
-      if (wasPlaying) { this.playTrack()};
+      if (wasPlaying) {this.playTrack()};
     }
   }
 
@@ -67,7 +73,7 @@ class Player extends React.Component {
       this.trackIndex = 0;
     }
     this.loadTrack(this.tracks[this.trackIndex]);
-    if (wasPlaying) { this.playTrack()};
+    if (wasPlaying) {this.playTrack()};
   }
 
   render() {
@@ -82,9 +88,7 @@ class Player extends React.Component {
         />
 
         <div className='player-ui flex-col-center'>
-          <div className='progress'>
-
-          </div>
+          <ProgressBar audio={this.audio} />
           <div className='player-controls flex-row-center'>
 
             <button className='player-button'>
@@ -111,7 +115,6 @@ class Player extends React.Component {
         <div className='player-side-controls player-side'>
           <VolumeSlider audio={this.audio} />
         </div>
-
       </footer>
     )
   }

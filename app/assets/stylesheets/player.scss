@@ -31,6 +31,23 @@
   width: 42px;
 }
 
+.progress-container {
+    background-color: gainsboro;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 4px;
+    width: 100%;
+}
+
+.progress {
+    background-color: teal;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
 .player-track-info {
   display: flex;
   justify-content: flex-start;
@@ -68,11 +85,6 @@ div.player-cover-art img {
   display: flex;
   justify-content: flex-end;
 }
-
-// input[type='range'] {
-//   height: 2px;
-//   background-color: white;
-// }
 
 input[type=range]::-webkit-slider-runnable-track {
   color: #fff;
