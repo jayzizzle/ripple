@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_29_183434) do
+ActiveRecord::Schema.define(version: 2021_09_29_193850) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "album_likes", force: :cascade do |t|
+    t.integer "album_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["album_id", "user_id"], name: "index_album_likes_on_album_id_and_user_id", unique: true
+    t.index ["album_id"], name: "index_album_likes_on_album_id"
+    t.index ["user_id"], name: "index_album_likes_on_user_id"
+  end
 
   create_table "albums", force: :cascade do |t|
     t.string "title", null: false
@@ -34,12 +44,59 @@ ActiveRecord::Schema.define(version: 2021_09_29_183434) do
     t.index ["artist_name"], name: "index_artists_on_artist_name"
   end
 
+  create_table "follows", force: :cascade do |t|
+    t.integer "artist_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["artist_id", "user_id"], name: "index_follows_on_artist_id_and_user_id", unique: true
+    t.index ["artist_id"], name: "index_follows_on_artist_id"
+    t.index ["user_id"], name: "index_follows_on_user_id"
+  end
+
+  create_table "genre_tracks", force: :cascade do |t|
+    t.integer "genre_id", null: false
+    t.integer "track_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["genre_id"], name: "index_genre_tracks_on_genre_id"
+    t.index ["track_id"], name: "index_genre_tracks_on_track_id"
+  end
+
+  create_table "genres", force: :cascade do |t|
+    t.string "title", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["title"], name: "index_genres_on_title", unique: true
+  end
+
+  create_table "playlist_tracks", force: :cascade do |t|
+    t.integer "playlist_id", null: false
+    t.integer "track_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["playlist_id", "track_id"], name: "index_playlist_tracks_on_playlist_id_and_track_id", unique: true
+    t.index ["playlist_id"], name: "index_playlist_tracks_on_playlist_id"
+    t.index ["track_id"], name: "index_playlist_tracks_on_track_id"
+  end
+
   create_table "playlists", force: :cascade do |t|
     t.string "title", null: false
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["title", "user_id"], name: "index_playlists_on_title_and_user_id", unique: true
     t.index ["user_id"], name: "index_playlists_on_user_id"
+  end
+
+  create_table "track_likes", force: :cascade do |t|
+    t.integer "track_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["track_id", "user_id"], name: "index_track_likes_on_track_id_and_user_id", unique: true
+    t.index ["track_id"], name: "index_track_likes_on_track_id"
+    t.index ["user_id"], name: "index_track_likes_on_user_id"
   end
 
   create_table "tracks", force: :cascade do |t|
