@@ -1,7 +1,7 @@
 import React from 'react';
 import TogglePlayPause from './toggle_play_pause';
 import PlayerTrackInfo from './player_track_info';
-
+import VolumeSlider from './volume_slider';
 
 class Player extends React.Component {
   constructor(props) {
@@ -27,7 +27,7 @@ class Player extends React.Component {
   }
 
   shouldComponentUpdate() {
-    return true;
+    return false;
   }
 
   isPlaying() {
@@ -109,7 +109,7 @@ class Player extends React.Component {
         </div>
 
         <div className='player-side-controls player-side'>
-          <h2>RIPPLE</h2>
+          <VolumeSlider audio={this.audio} />
         </div>
 
       </footer>
