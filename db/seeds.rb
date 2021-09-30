@@ -64,11 +64,6 @@ drake = Artist.create(
     bio: ''
 )
 
-kendrick = Artist.create(
-    artist_name: 'Kendrick Lamar', 
-    bio: ''
-)
-
 jcole = Artist.create(
     artist_name: 'J. Cole', 
     bio: ''
@@ -1789,4 +1784,169 @@ track_like2 = TrackLike.create(
 track_like3 = TrackLike.create(
     track_id: in_case_we_die_11.id,
     user_id: 2
+)
+
+tt01 = TopTrack.create(
+  track_id: room_for_improvement_03.id,
+  artist_id: drake.id
+)
+
+tt02 = TopTrack.create(
+  track_id: room_for_improvement_14.id,
+  artist_id: drake.id
+)
+
+tt03 = TopTrack.create(
+  track_id: room_for_improvement_21.id,
+  artist_id: drake.id
+)
+
+tt04 = TopTrack.create(
+  track_id: nostalgia_ultra_03.id,
+  artist_id: frank.id
+)
+
+tt05 = TopTrack.create(
+  track_id: nostalgia_ultra_06.id,
+  artist_id: frank.id
+)
+
+tt06 = TopTrack.create(
+  track_id: nostalgia_ultra_10.id,
+  artist_id: frank.id
+)
+
+tt07 = TopTrack.create(
+  track_id: her_vol_2_02.id,
+  artist_id: her.id
+)
+
+tt08 = TopTrack.create(
+  track_id: her_vol_1_05.id,
+  artist_id: her.id
+)
+
+tt09 = TopTrack.create(
+  track_id: her_vol_1_01.id,
+  artist_id: her.id
+)
+
+tt10 = TopTrack.create(
+  track_id: friday_night_lights_06.id,
+  artist_id: jcole.id
+)
+
+tt11 = TopTrack.create(
+  track_id: friday_night_lights_03.id,
+  artist_id: jcole.id
+)
+
+tt12 = TopTrack.create(
+  track_id: friday_night_lights_02.id,
+  artist_id: jcole.id
+)
+
+tt13 = TopTrack.create(
+  track_id: division_08.id,
+  artist_id: jenevieve.id
+)
+
+tt14 = TopTrack.create(
+  track_id: division_07.id,
+  artist_id: jenevieve.id
+)
+
+tt15 = TopTrack.create(
+  track_id: division_09.id,
+  artist_id: jenevieve.id
+)
+
+tt16 = TopTrack.create(
+  track_id: sailing_souls_04.id,
+  artist_id: jhene.id
+)
+
+tt17 = TopTrack.create(
+  track_id: sailing_souls_03.id,
+  artist_id: jhene.id
+)
+
+tt18 = TopTrack.create(
+  track_id: sailing_souls_07.id,
+  artist_id: jhene.id
+)
+
+tt19 = TopTrack.create(
+  track_id: cloud_19_01.id,
+  artist_id: kehlani.id
+)
+
+tt20 = TopTrack.create(
+  track_id: cloud_19_02.id,
+  artist_id: kehlani.id
+)
+
+tt21 = TopTrack.create(
+  track_id: cloud_19_06.id,
+  artist_id: kehlani.id
+)
+
+tt22 = TopTrack.create(
+  track_id: mischief_02.id,
+  artist_id: miguel.id
+)
+
+tt23 = TopTrack.create(
+  track_id: mischief_08.id,
+  artist_id: miguel.id
+)
+
+tt24 = TopTrack.create(
+  track_id: mischief_05.id,
+  artist_id: miguel.id
+)
+
+tt25 = TopTrack.create(
+  track_id: black_water_11.id,
+  artist_id: tinashe.id
+)
+
+tt26 = TopTrack.create(
+  track_id: in_case_we_die_11.id,
+  artist_id: tinashe.id
+)
+
+tt27 = TopTrack.create(
+  track_id: in_case_we_die_09.id,
+  artist_id: tinashe.id
+)
+
+tt28 = TopTrack.create(
+  track_id: house_of_balloons_05.id,
+  artist_id: weeknd.id
+)
+
+tt29 = TopTrack.create(
+  track_id: house_of_balloons_02.id,
+  artist_id: weeknd.id
+)
+
+tt30 = TopTrack.create(
+  track_id: house_of_balloons_01.id,
+  artist_id: weeknd.id
+)
+
+tt31 = TopTrack.create(
+  track_id: wolf_in_color_03.id,
+  artist_id: wolftyla.id
+)
+
+tt32 = TopTrack.create(
+  track_id: wolf_in_color_04.id,
+  artist_id: wolftyla.id
+)
+
+tt33 = TopTrack.create(
+  track_id: wolf_in_color_05.id,
+  artist_id: wolftyla.id
 )

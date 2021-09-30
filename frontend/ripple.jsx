@@ -6,6 +6,7 @@ import configureStore from './store/store';
 
 // TESTING ONLY
 import { signup, login, logout } from './actions/session_actions';
+import { getAllArtists, getArtist } from './actions/artist_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -29,6 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
   //TESTING ONLY
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+  window.getAllArtists = getAllArtists;
+  window.getArtist = getArtist;
   // window.signup = signup;
   // window.login = login;
   window.logout = logout;

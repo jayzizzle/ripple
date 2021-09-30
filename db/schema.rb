@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_29_224152) do
+ActiveRecord::Schema.define(version: 2021_09_30_033449) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -88,6 +88,16 @@ ActiveRecord::Schema.define(version: 2021_09_29_224152) do
     t.datetime "updated_at", null: false
     t.index ["title", "user_id"], name: "index_playlists_on_title_and_user_id", unique: true
     t.index ["user_id"], name: "index_playlists_on_user_id"
+  end
+
+  create_table "top_tracks", force: :cascade do |t|
+    t.integer "track_id", null: false
+    t.integer "artist_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["artist_id"], name: "index_top_tracks_on_artist_id"
+    t.index ["track_id", "artist_id"], name: "index_top_tracks_on_track_id_and_artist_id", unique: true
+    t.index ["track_id"], name: "index_top_tracks_on_track_id"
   end
 
   create_table "track_likes", force: :cascade do |t|

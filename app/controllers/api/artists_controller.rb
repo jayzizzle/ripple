@@ -2,13 +2,13 @@ class Api::ArtistsController < ApplicationController
 
   def index
     @artists = Artist.all
-    render :index
+    render '/api/artists/index'
   end
 
   def show
     @artist = Artist.find_by(id: params[:id])
     if @artist
-      render :show
+      render '/api/artists/show'
     else
       render json: @artist.errors.full_messages, status: 404
     end

@@ -1,3 +1,2 @@
-json.set! @artist.id do
-  
-end
+json.extract! @artist, :id, :artist_name
+json.albums @artist.albums
