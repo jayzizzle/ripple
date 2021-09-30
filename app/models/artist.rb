@@ -18,4 +18,12 @@ class Artist < ApplicationRecord
     through: :albums,
     source: :tracks
 
+  has_many :listed_top_tracks,
+    foreign_key: :artist_id,
+    class_name: 'TopTrack'
+
+  has_many :top_tracks,
+    through: :top_tracks,
+    source: :track
+
 end

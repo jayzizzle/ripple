@@ -1,7 +1,7 @@
 import { 
   RECEIVED_ALL_ARTISTS, 
   RECEIVED_ARTIST 
-} from "../../actions/artist_actions";
+} from '../../actions/artist_actions';
 
 const artistsReducer = (oldState={}, action) => {
   Object.freeze(oldState);
@@ -15,6 +15,6 @@ const artistsReducer = (oldState={}, action) => {
     default:
       return oldState;
   }
-}
+};
 
 export default artistsReducer;

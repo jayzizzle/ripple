@@ -8,6 +8,10 @@ class Album < ApplicationRecord
     foreign_key: :artist_id,
     class_name: 'Artist'
 
+  has_many :tracks,
+    foreign_key: :album_id,
+    class_name: 'Track'
+
   has_many :likes,
     foreign_key: :album_id,
     class_name: 'AlbumLike'
@@ -15,5 +19,7 @@ class Album < ApplicationRecord
   has_many :likers,
     through: :likes,
     source: :user
+
+
 
 end

@@ -6,9 +6,9 @@ class Api::AlbumsController < ApplicationController
   end
 
   def show
-    @album.find_by(id: params[:id])
+    @album = Album.find_by(id: params[:id])
     if @album
-      render :show
+      render '/api/albums/show'
     else
       render json: @album.errors.full_messages, status: 404
     end

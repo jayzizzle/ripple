@@ -7,6 +7,7 @@ import configureStore from './store/store';
 // TESTING ONLY
 import { signup, login, logout } from './actions/session_actions';
 import { getAllArtists, getArtist } from './actions/artist_actions';
+import { getAllAlbums, getAlbum } from './actions/album_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -32,6 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.dispatch = store.dispatch;
   window.getAllArtists = getAllArtists;
   window.getArtist = getArtist;
+  window.getAllAlbums = getAllAlbums;
+  window.getAlbum = getAlbum;
   // window.signup = signup;
   // window.login = login;
   window.logout = logout;
