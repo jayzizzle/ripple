@@ -2,6 +2,9 @@ import {
   RECEIVED_ALL_ARTISTS, 
   RECEIVED_ARTIST 
 } from '../../actions/artist_actions';
+import { RECEIVED_CURRENT_USER } from '../../actions/session_actions';
+
+
 
 const artistsReducer = (oldState={}, action) => {
   Object.freeze(oldState);
@@ -12,6 +15,8 @@ const artistsReducer = (oldState={}, action) => {
     case RECEIVED_ARTIST:
       newState[action.artist.id] = action.artist;
       return newState;
+    case RECEIVED_CURRENT_USER:
+      return {...action.currentUser.artists};
     default:
       return oldState;
   }

@@ -32,6 +32,15 @@ class User < ApplicationRecord
     through: :track_likes,
     source: :track
 
+  has_many :album_artists_liked,
+    through: :albums_liked,
+    source: :artist
+
+  has_many :track_artists_liked,
+    through: :tracks_liked,
+    source: :artist
+
+
   attr_reader :password
 
   after_initialize :ensure_session_token

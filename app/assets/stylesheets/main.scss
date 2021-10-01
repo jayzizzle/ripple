@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 body {
@@ -44,6 +44,12 @@ h5 {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: bolder;
+  color: #fff;
+}
+
+h6 {
+  font-size: 14px;
+  color: #bbb
 }
 
 header {
@@ -258,4 +264,79 @@ label {
   flex-direction: column;
   justify-content: center;
   align-items: flex start;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  padding: 20px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: linear-gradient(215deg,#1a1a1a 15%,#222 85%) no-repeat 50% fixed;
+  z-index: 2;
+  // background-color: #242528;
+}
+
+.sidebar-link {
+  width: 195px;
+  border-radius: 2%;
+  padding: 2px;
+  margin: 5px 0px;
+  border: none;
+  background-color: none;
+  display: block;
+}
+
+.sidebar-link:hover {
+  background-color: #333;
+}
+
+.menu-icon {
+  padding: 10px 20px 10px 10px;
+  width: 15px;
+}
+
+.main-window {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 280px;
+  padding-top: 25px;
+}
+
+.main-row {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.data-display {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  justify-content: flex-start;
+}
+
+.data-box {
+  padding: 20px;
+  width: 160px;
+  font-size: 11px;
+  color: #666;
+  font-weight: bold;
+}
+
+.gray-border {
+  background-color: #333;
+  padding: 3px 6px;
+  border-radius: 2px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 10px;
+
 }

@@ -28,7 +28,7 @@ class GuestLoginForm extends React.Component {
 }
 
 const mSTP = state => ({
-  guest: {username: 'miles', password: 'morales'}
+  guest: {username: 'spidey', password: 'parker'}
 });
 
 const mDTP = dispatch => ({

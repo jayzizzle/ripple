@@ -1,12 +1,14 @@
 import React from 'react';
-import LogOutButton from './logout_button';
 import Player from '../player/player';
+import MainContainer from './main_container';
+import Sidebar from './sidebar';
+import AllArtists from './all_artists';
 
 
 const Dashboard = () => (
   <>
-    <h1>Dashboard</h1>
-    <LogOutButton />
+    <Sidebar />
+    <MainContainer />
     <Player />
   </>
 )

@@ -46,3 +46,11 @@ export const logout = () => dispatch => (
     dispatch(receivedSessionErrors(error.responseJSON))
   ))
 );
+
+export const getUser = (userId) => dispatch => (
+  APIUtil.getUser(userId).then((user) => (
+    dispatch(receivedCurrentUser(user))
+  ), error => (
+    dispatch(receivedSessionErrors(error.responseJSON))
+  ))
+);

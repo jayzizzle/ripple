@@ -88,7 +88,7 @@ class Player extends React.Component {
         />
 
         <div className='player-ui flex-col-center'>
-          <ProgressBar audio={this.audio} />
+          {/* <ProgressBar audio={this.audio} /> */}
 
           {/* <div className='progress-container'>
             <div className='progress'>
@@ -117,6 +117,7 @@ class Player extends React.Component {
             </button>
 
           </div>
+          <ProgressBar audio={this.audio} />
         </div>
 
         <div className='player-side-controls player-side'>

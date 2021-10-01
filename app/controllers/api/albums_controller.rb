@@ -1,7 +1,18 @@
 class Api::AlbumsController < ApplicationController
 
   def index
-    @albums = Album.all
+    # @albums = Album.all
+
+    @albums = Album.select('
+      albums.id,
+      title,
+      artist_id,
+      artists.artist_name,
+      category,
+      year,
+      is_explicit
+    ').joins(:artist)
+
     render '/api/albums/index'
   end
 
