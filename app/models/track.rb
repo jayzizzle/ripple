@@ -19,4 +19,6 @@ class Track < ApplicationRecord
     foreign_key: :artist_id,
     class_name: 'Artist'
 
+  has_one_attached :mp3File
+
 end

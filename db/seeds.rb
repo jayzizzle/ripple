@@ -18,6 +18,7 @@ Follow.destroy_all
 AlbumLike.destroy_all
 TrackLike.destroy_all
 
+require 'open-uri'
 
 spidey = User.create(username: 'spidey', email: 'spidey@marvel.com', password: 'parker')
 miles = User.create(username: 'miles', email: 'miles@marvel.com', password: 'morales')
@@ -78,6 +79,9 @@ her = Artist.create(
     artist_name: 'H.E.R.', 
     bio: ''
 )
+
+file009 = open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/tinashe.jpg')
+tinashe.photo.attach(io: file, filename: 'tinashe.jpg')
 
 in_case_we_die = Album.create(
     title: 'In Case We Die',

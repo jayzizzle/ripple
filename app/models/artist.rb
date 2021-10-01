@@ -26,4 +26,6 @@ class Artist < ApplicationRecord
     through: :top_tracks,
     source: :track
 
+  has_one_attached :photo
+
 end
