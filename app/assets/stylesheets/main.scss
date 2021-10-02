@@ -397,10 +397,32 @@ label {
 .album-show {
   height: 160px;
   width: 160px;
-  padding: 10px 20px 10px 0px;
+  padding: 10px 20px 20px 0px;
 }
 
 .track-row-info {
   display: flex;
   justify-content: space-between;
+}
+
+.display-title {
+  font-size: 20px;
+  font-weight: bolder;
+  padding-bottom: 4px;
+}
+
+.display-name {
+  font-weight: bold;
+  font-size: 16px;
+  color: #aaa;
+}
+
+.display-length {
+  font-size: 14px;
+  color: #777;
+}
+
+.display-year {
+  color: #666;
+  font-size: 14px;
 }

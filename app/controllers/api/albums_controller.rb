@@ -2,6 +2,7 @@ class Api::AlbumsController < ApplicationController
 
   def index
     @albums = Album.with_attached_cover.select('*').joins(:artist)
+    # @albums = Album.select('*').joins(:artist)
     render '/api/albums/index'
   end
 
@@ -10,7 +11,7 @@ class Api::AlbumsController < ApplicationController
     if @album
       render '/api/albums/show'
     else
-      render json: @album.errors.full_messages, status: 404
+      render json: ['Album does not exit.'], status: 404
     end
   end
 

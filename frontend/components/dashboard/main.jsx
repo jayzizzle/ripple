@@ -7,7 +7,7 @@ class Main extends React.Component {
   componentDidMount() {
     this.props.getUser(this.props.userId);
     this.props.getAllAlbums();
-    this.props.getAllArtists();
+    // this.props.getAllArtists();
   }
 
   render() {
@@ -16,7 +16,7 @@ class Main extends React.Component {
     return (
       <div className='main-window'>
         <AlbumsRow albums={albums} />
-        <ArtistsRow artists={artists} />
+        {/* <ArtistsRow artists={artists} /> */}
       </div>
     )
   }
