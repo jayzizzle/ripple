@@ -15,8 +15,6 @@ const artistsReducer = (oldState={}, action) => {
     case RECEIVED_ARTIST:
       newState[action.artist.id] = action.artist;
       return newState;
-    case RECEIVED_CURRENT_USER:
-      return {...action.currentUser.artists};
     default:
       return oldState;
   }

@@ -3,6 +3,7 @@ import {
   RECEIVED_TRACK
 } from '../../actions/track_actions';
 import { RECEIVED_CURRENT_USER } from '../../actions/session_actions';
+import { RECEIVED_ALBUM } from '../../actions/album_actions';
 
 const tracksReducer = (oldState={}, action) => {
   Object.freeze(oldState);
@@ -15,6 +16,8 @@ const tracksReducer = (oldState={}, action) => {
       return newState;
     case RECEIVED_CURRENT_USER:
       return {...action.currentUser.tracks};
+    case RECEIVED_ALBUM:
+      return {...oldState, ...action.album.tracks}
     default:
       return oldState;
   }

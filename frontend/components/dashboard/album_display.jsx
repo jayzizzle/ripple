@@ -1,15 +1,15 @@
 import React from 'react';
 import Player from '../player/player';
-import MainContainer from './main_container';
 import Sidebar from './sidebar';
+import AlbumShowContainer from './album_show_container'
 
 
-const Dashboard = () => (
+const AlbumDisplay = () => (
   <>
     <Sidebar />
-    <MainContainer />
+    <AlbumShowContainer />
     <Player />
   </>
 )
 
-export default Dashboard;
+export default AlbumDisplay;

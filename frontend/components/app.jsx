@@ -1,6 +1,7 @@
 import React from 'react';
 import Splash from './splash/splash';
 import Dashboard from './dashboard/dashboard';
+import AlbumDisplay from './dashboard/album_display';
 import LoginFormContainer from './session/session_form/login_form_container';
 import SignupFormContainer from './session/session_form/signup_form_container';
 import {
@@ -16,6 +17,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
   <div className='full-wrapper'>
     <Switch>
+      <ProtectedRoute path='/albums/:albumId' component={AlbumDisplay} />
       <AuthRoute exact path='/login' component={LoginFormContainer} />
       <AuthRoute exact path='/signup' component={SignupFormContainer} />
       <ProtectedRoute exact path='/dashboard' component={Dashboard} />
