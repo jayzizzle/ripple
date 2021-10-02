@@ -269,6 +269,12 @@ label {
   align-items: flex start;
 }
 
+.flex-row-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex start;
+}
+
 .sidebar {
   position: fixed;
   top: 0;
@@ -386,4 +392,15 @@ label {
   color: #fff;
   text-decoration: underline;
   transition: 0.5s;
+}
+
+.album-show {
+  height: 160px;
+  width: 160px;
+  padding: 10px 20px 10px 0px;
+}
+
+.track-row-info {
+  display: flex;
+  justify-content: space-between;
 }

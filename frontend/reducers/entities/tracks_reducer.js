@@ -16,8 +16,8 @@ const tracksReducer = (oldState={}, action) => {
       return newState;
     case RECEIVED_CURRENT_USER:
       return {...action.currentUser.tracks};
-    case RECEIVED_ALBUM:
-      return {...oldState, ...action.album.tracks}
+    // case RECEIVED_ALBUM:
+    //   return {...oldState, ...action.album.tracks}
     default:
       return oldState;
   }
