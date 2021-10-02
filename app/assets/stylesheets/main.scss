@@ -376,3 +376,13 @@ label {
 .extra-padding {
   padding-top: 10px;
 }
+
+.album {
+  border-radius: 3px;
+}
+
+.line-hover:hover {
+  color: #fff;
+  text-decoration: underline;
+  transition: 0.5s;
+}

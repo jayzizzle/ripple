@@ -6,7 +6,7 @@ class Api::ArtistsController < ApplicationController
   end
 
   def show
-    @artist = Artist.find_by(id: params[:id])
+    @artist = Artist.with_attached_photo.find_by(id: params[:id])
     if @artist
       render '/api/artists/show'
     else

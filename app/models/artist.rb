@@ -23,7 +23,7 @@ class Artist < ApplicationRecord
     class_name: 'TopTrack'
 
   has_many :top_tracks,
-    through: :top_tracks,
+    through: :listed_top_tracks,
     source: :track
 
   has_one_attached :photo
