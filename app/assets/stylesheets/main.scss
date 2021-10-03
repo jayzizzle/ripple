@@ -275,6 +275,12 @@ label {
   align-items: flex start;
 }
 
+.flex-row-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex start;
+}
+
 .sidebar {
   position: fixed;
   top: 0;
@@ -317,6 +323,7 @@ label {
   justify-content: flex-start;
   padding-left: 280px;
   padding-top: 25px;
+  padding: 25px 20px 0px 280px
 }
 
 .main-row {
@@ -408,7 +415,7 @@ label {
 .display-title {
   font-size: 20px;
   font-weight: bolder;
-  padding-bottom: 4px;
+  padding-bottom: 5px;
 }
 
 .display-name {
@@ -418,11 +425,112 @@ label {
 }
 
 .display-length {
-  font-size: 14px;
+  font-size: 12px;
   color: #777;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .display-year {
   color: #666;
+  font-size: 12px;
+}
+
+.track-col {
+  width: 24%;
+  padding: 10px 30px 10px 0px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.track-num-col {
+  width: 5%;
+  color: #555;
+}
+
+.title-col {
+  width: 45%
+}
+
+.name-col {
+  width: 40%
+}
+
+.time-col {
+  width: 15%
+}
+
+.more-col {
+  width: 15%
+}
+
+.col-heading {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #555;
+}
+
+.tracklist-item {
+  font-size: 15px;
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+.tracklist-item:hover {
+  background-color: #333;
+}
+
+.button-small {
+  border: none;
+  background-color: transparent;
+  color: #aaa;
+  font-size: 16px;
+}
+
+.button-small:hover {
+  color: #fff;
+}
+
+.gray {
+  color: #555;
+}
+
+.button-white-large {
+  background-color: white;
+  border: none;
   font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 7px
+}
+
+.button-white-large:hover {
+  background-color: #ccc;
+  color: #333;
+  transition: 0.5s;
+}
+
+.button-white-large .fas, .button-gray-large .fas {
+  font-size: 14px;
+}
+
+.button-gray-large {
+  background-color: #555;
+  border: none;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 7px;
+  color: white;
+}
+
+.button-gray-large:hover {
+  background-color: #444;
+  color: #aaa;
+  transition: 0.5s;
+}
+
+.album-button-row {
+  padding-bottom: 10px;
 }

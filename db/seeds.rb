@@ -39,13 +39,13 @@ wolftyla = Artist.create(
     bio: ''
 )
 
-file003 = open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/her.jpg')
+file003 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/her.jpg')
 her.photo.attach(io: file003, filename: 'her.jpg')
 
-file007 = open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/kehlani.jpg')
+file007 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/kehlani.jpg')
 kehlani.photo.attach(io: file007, filename: 'kehlani.jpg')
 
-file011 = open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/wolftyla.jpg')
+file011 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/wolftyla.jpg')
 wolftyla.photo.attach(io: file011, filename: 'wolftyla.jpg')
 
 her_vol_1 = Album.create(
@@ -72,13 +72,13 @@ wolf_in_color = Album.create(
     is_explicit: false
 )
 
-cover01 = open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/her-vol1.jpg')
+cover01 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/her-vol1.jpg')
 her_vol_1.cover.attach(io: cover01, filename: 'her-vol1.jpg')
 
-cover02 = open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/kehlani-cloud.jpg')
+cover02 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/kehlani-cloud.jpg')
 cloud_19.cover.attach(io: cover02, filename: 'kehlani-cloud.jpg')
 
-cover03 = open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/wolftyla-wolf.jpg')
+cover03 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/wolftyla-wolf.jpg')
 wolf_in_color.cover.attach(io: cover03, filename: 'wolftyla-wolf.jpg')
 
 her_vol_1_01 = Track.create(
