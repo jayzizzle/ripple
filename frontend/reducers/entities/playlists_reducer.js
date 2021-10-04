@@ -14,7 +14,7 @@ const playlistsReducer = (oldState={}, action) => {
       newState[action.playlist.id] = action.playlist;
       return newState;
     case RECEIVED_CURRENT_USER:
-      return {...action.currentUser.playlists};
+      return {...oldState, ...action.currentUser.playlists};
     default:
       return oldState;
   }

@@ -534,3 +534,19 @@ label {
 .album-button-row {
   padding-bottom: 10px;
 }
+
+.color-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 120px;
+  background-color: blue;
+  margin-bottom: 15px;
+  background: linear-gradient(215deg,midnightblue 15%, darkred 85%) no-repeat 50% fixed;
+  border-radius: 4px;
+  padding: 20px;
+  font-size: 64px;
+  color: #ddd;
+  font-family: 'Montserrat', sans-serif;
+}
