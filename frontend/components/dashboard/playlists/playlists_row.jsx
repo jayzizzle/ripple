@@ -12,6 +12,9 @@ const PlaylistsRow = (props) => (
             <h5>{playlist.title}</h5>
           </Link>
           <h6>Created by: Me</h6>
+          <Link to={`/playlists/${playlist.id}/edit`}>
+            <p>Edit Playlist</p>
+          </Link>
         </li>
       ))}
       <li className='data-box'> 

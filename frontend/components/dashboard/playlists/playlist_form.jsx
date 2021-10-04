@@ -4,10 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 class PlaylistForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      title: '',
-      user_id: this.props.user_id
-    }
+    this.state = this.props.playlist
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
