@@ -13,7 +13,7 @@ const artistsReducer = (oldState={}, action) => {
     case RECEIVED_ALL_ARTISTS:
       return {...oldState, ...action.artists};
     case RECEIVED_ARTIST:
-      newState[action.artist.id] = action.artist;
+      newState[action.artist.artist.id] = action.artist.artist;
       return newState;
     default:
       return oldState;

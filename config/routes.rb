@@ -12,7 +12,8 @@ Rails.application.routes.draw do
 
     resources :tracks, only: [:index, :show]
     
-    resources :playlists, only: [:index, :show, :new, :create, :update, :destroy]
+    resources :playlists
+    resources :playlist_tracks
 
     resources :genre, only: [:index, :show]
 
