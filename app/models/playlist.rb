@@ -7,12 +7,16 @@ class Playlist < ApplicationRecord
     foreign_key: :user_id,
     class_name: 'User'
 
-  has_many :tracks,
+  has_many :playlist_tracks,
     foreign_key: :playlist_id,
     class_name: 'PlaylistTrack'
 
   has_many :artists,
-    through: :tracks,
+    through: :playlist_tracks,
     source: :artist
+
+  has_many :tracks,
+    through: :playlist_tracks,
+    source: :track
 
 end

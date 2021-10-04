@@ -19,6 +19,14 @@ class Track < ApplicationRecord
     foreign_key: :artist_id,
     class_name: 'Artist'
 
+  has_many :playlist_tracks,
+    foreign_key: :track_id,
+    class_name: 'PlaylistTrack'
+
+  has_many :playlists,
+    through: :playlist_tracks,
+    source: :playlist
+
   has_one_attached :mp3File
 
 end
