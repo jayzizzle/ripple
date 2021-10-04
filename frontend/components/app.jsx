@@ -4,6 +4,7 @@ import Dashboard from './dashboard/dashboard';
 import AlbumDisplay from './dashboard/album_display';
 import ArtistDisplay from './dashboard/artist_display';
 import PlaylistShowAllContainer from './dashboard/playlists/playlist_show_all_container';
+import PlaylistForms from './dashboard/playlists/playlist_forms';
 import LoginFormContainer from './session/session_form/login_form_container';
 import SignupFormContainer from './session/session_form/signup_form_container';
 import {
@@ -21,7 +22,8 @@ const App = () => (
     <Switch>
       <ProtectedRoute path='/albums/:albumId' component={AlbumDisplay} />
       <ProtectedRoute path='/artists/:artistId' component={ArtistDisplay} />
-      <ProtectedRoute path='/playlists' component={PlaylistShowAllContainer} />
+      <ProtectedRoute exact path='/playlists/new' component={PlaylistForms} />
+      <ProtectedRoute exact path='/playlists' component={PlaylistShowAllContainer} />
       <AuthRoute exact path='/login' component={LoginFormContainer} />
       <AuthRoute exact path='/signup' component={SignupFormContainer} />
       <ProtectedRoute exact path='/dashboard' component={Dashboard} />
