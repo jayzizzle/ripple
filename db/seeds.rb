@@ -312,7 +312,7 @@ follows3 = Follow.create(
 
 album_like3 = AlbumLike.create(
     album_id: wolf_in_color.id,
-    user_id: 2
+    user_id: 1
 )
 
 tt07 = TopTrack.create(

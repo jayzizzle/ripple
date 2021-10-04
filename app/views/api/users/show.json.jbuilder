@@ -1,8 +1,6 @@
 json.extract! @user, :id, :username
-
-json.info do
-  json.extract! @user, :id, :username
-end
+json.playlists @user.playlists
+json.albumsLiked @user.albums_liked.ids
 
 # json.set! 'albums' do
 #   @user.albums_liked.each do |album|

@@ -17,7 +17,7 @@ export const receivedPlaylist = playlist => ({
 export const removedPlaylist = playlistId => ({
   type: REMOVED_PLAYLIST,
   playlistId
-})
+});
 
 export const getAllPlaylists = () => dispatch => (
   APIUtil.getAllPlaylists().then(playlists => (
