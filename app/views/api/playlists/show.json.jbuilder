@@ -13,3 +13,14 @@ json.set! 'tracks' do
     end
   end
 end
+
+# @playlist_tracks.each do |playlist_track|
+#   json.extract! playlist_track, :id, :playlist_id, :track_id
+# end
+json.set! 'tracks' do
+  @playlist_tracks.each do |track|
+    json.set! track.track_id do
+      json.playlistTrackId track.id
+    end
+  end
+end

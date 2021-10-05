@@ -8,7 +8,7 @@ class PlaylistForm extends React.Component {
     super(props);
     this.state = this.props.playlist
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.handleDelete = this.handleDelete.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   // componentDidMount() {
@@ -25,17 +25,17 @@ class PlaylistForm extends React.Component {
     return (e) => this.setState({ [field]: e.target.value });
   }
 
-  // handleDelete(e) {
-  //   e.preventDefault();
-  //   this.props.deletePlaylist(this.props.playlistId)
-  //     .then(() => this.props.history.push('/playlists'))
-  // }
+  handleDelete(e) {
+    e.preventDefault();
+    this.props.deletePlaylist(this.props.playlistId)
+      .then(() => this.props.history.push('/playlists'))
+  }
 
-  // renderDelete() {
-  //   return(
-  //     <button className='btn-session-form' onClick={this.handleDelete}>Delete Playlist</button>
-  //   )
-  // }
+  renderDelete() {
+    return(
+      <button className='btn-session-form' onClick={this.handleDelete}>Delete Playlist</button>
+    )
+  }
 
   render() {
     if (!this.props.playlist) return null
@@ -58,7 +58,7 @@ class PlaylistForm extends React.Component {
             </label>
             <button className='btn-session-form'>{formType}</button>
           </form>
-          {/* {formType === 'Rename Playlist' ? this.renderDelete() : null} */}
+          {formType === 'Rename Playlist' ? this.renderDelete() : null}
           </div>
         </div>
         <Player />

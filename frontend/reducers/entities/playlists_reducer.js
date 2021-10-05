@@ -15,6 +15,8 @@ const playlistsReducer = (oldState={}, action) => {
     case RECEIVED_ALL_PLAYLISTS:
       return action.playlists;
     case REMOVED_PLAYLIST:
+      console.log('reducer')
+      console.log(newState);
       delete newState[action.playlistId];
       return newState;
     default:

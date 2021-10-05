@@ -44,7 +44,7 @@ export const patchPlaylist = (playlist) => dispatch => (
 );
 
 export const deletePlaylist = (playlistId) => dispatch => (
-  APIUtil.deletePlaylist(playlistId).then(playlist => (
+  APIUtil.deletePlaylist(playlistId).then(() => (
     dispatch(removedPlaylist(playlistId))
   ))
 );
