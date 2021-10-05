@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { getPlaylist } from '../../../actions/playlist_actions';
+import PlaylistShow from './playlist_show';
 
 const mSTP = (state, ownProps) => ({
   playlist: state.entities.playlists[ownProps.match.params.playlistId],

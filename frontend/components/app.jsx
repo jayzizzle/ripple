@@ -17,11 +17,13 @@ import {
 } from 'react-router-dom';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import PlaylistDisplay from './dashboard/playlists/playlist_display';
 
 const App = () => (
   <div className='full-wrapper'>
     <Switch>
       <ProtectedRoute path='/playlists/:playlistId/edit' component={PlaylistEditFormContainer} />
+      <ProtectedRoute path='/playlists/:playlistId/' component={PlaylistDisplay} />
       <ProtectedRoute path='/albums/:albumId' component={AlbumDisplay} />
       <ProtectedRoute path='/artists/:artistId' component={ArtistDisplay} />
       <ProtectedRoute exact path='/playlists/new' component={PlaylistCreateFormContainer} />

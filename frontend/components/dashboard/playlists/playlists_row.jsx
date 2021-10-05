@@ -17,7 +17,7 @@ class PlaylistsRow extends React.Component {
           {playlists.map((playlist, i) => (
             <li className='data-box' key={i}> 
               <Link className='line-hover'to={`/playlists/${playlist.id}`}>
-                <div className='color-box'>{}</div>
+                <div className='color-box'>{playlist.title.slice(0, 2)}</div>
                 <h5>{playlist.title}</h5>
               </Link>
               <h6>Created by: Me</h6>
@@ -40,5 +40,3 @@ class PlaylistsRow extends React.Component {
 }
 
 export default PlaylistsRow;
-
-// playlist.title.slice(0, 2)

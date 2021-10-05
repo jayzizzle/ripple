@@ -4,7 +4,7 @@ import Sidebar from '../sidebar';
 import PlaylistShowContainer from './playlist_show_container'
 
 
-const AlbumDisplay = () => (
+const PlaylistDisplay = () => (
   <>
     <Sidebar />
     <PlaylistShowContainer />
@@ -12,4 +12,4 @@ const AlbumDisplay = () => (
   </>
 )
 
-export default AlbumDisplay;
+export default PlaylistDisplay;

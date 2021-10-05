@@ -13,8 +13,6 @@ const playlistsReducer = (oldState={}, action) => {
       return newState;
     case RECEIVED_ALL_PLAYLISTS:
       return action.playlists;
-    // case RECEIVED_CURRENT_USER:
-    //   return action.currentUser.playlists;
     default:
       return oldState;
   }

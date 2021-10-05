@@ -1,12 +1,12 @@
 class Api::PlaylistsController < ApplicationController
 
   def index
-    @playlists = current_user.playlists
+    @playlists = current_user.playlists.includes(:tracks)
     render '/api/playlists/index'
   end
 
   def show
-    @playlist = Playlist.find_by(id: params[:id])
+    @playlist = Playlist.includes(:tracks).find_by(id: params[:id])
     if @playlist
       render '/api/playlists/show'
     else
