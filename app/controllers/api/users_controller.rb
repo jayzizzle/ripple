@@ -12,7 +12,9 @@ class Api::UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
+    # @playlists = Playlist.includes(:tracks).where(user_id: params[:id])
     if @user
+      
       # @playlists = Playlist.includes().find_by(user_id: params[:id])
       render '/api/users/show'
     else

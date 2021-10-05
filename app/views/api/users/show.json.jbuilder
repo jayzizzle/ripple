@@ -1,18 +1,20 @@
 json.extract! @user, :id, :username
 
-json.set! 'playlists' do
-  playlists = Playlist.includes(:tracks).where(user_id: current_user.id)
-  playlists.each do |playlist|
-    json.set! playlist.id do
-      json.extract! playlist, :id, :title, :user_id
-      json.numTracks playlist.tracks.length
-    end
-  end
-end
+#if !!current_user
+ # json.set! 'playlists' do
+ #   playlists = Playlist.includes(:tracks).where(user_id: current_user.id)
+  #  playlists.each do |playlist|
+   #   json.set! playlist.id do
+    #    json.extract! playlist, :id, :title, :user_id
+     #   json.numTracks playlist.tracks.length
+#      end
+#    end
+#  end
+#end
 
 
 # json.playlists @user.playlists 
-json.albumsLiked @user.albums_liked.ids
+#json.albumsLiked @user.albums_liked.ids
 
 # json.set! 'albums' do
 #   @user.albums_liked.each do |album|

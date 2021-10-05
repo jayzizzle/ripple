@@ -1,7 +1,7 @@
 import React from 'react';
 import Player from '../../player/player';
 import Sidebar from '../sidebar';
-import PlaylistsRow from './playlists_row';
+import PlaylistsRowContainer from './playlists_row_container';
 
 class PlaylistShowAll extends React.Component {
   constructor(props) {
@@ -9,7 +9,7 @@ class PlaylistShowAll extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getUser(this.props.currentUserId);
+    this.props.getAllPlaylists();
   }
 
   render() {
@@ -19,7 +19,8 @@ class PlaylistShowAll extends React.Component {
       <>
         <Sidebar />
         <div className='main-window'>
-          <PlaylistsRow playlists={playlists} />
+          {/* <PlaylistsRow playlists={playlists} /> */}
+          <PlaylistsRowContainer />
         </div>
         <Player />
       </>

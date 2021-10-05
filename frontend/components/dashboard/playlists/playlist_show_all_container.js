@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import PlaylistShowAll from './playlist_show_all';
 import { getUser } from '../../../actions/session_actions';
+import { getAllPlaylists } from '../../../actions/playlist_actions';
 
 const mSTP = (state, ownProps) => ({
   currentUserId: state.session.id,
@@ -8,7 +9,7 @@ const mSTP = (state, ownProps) => ({
 });
 
 const mDTP = dispatch => ({
-  getUser: (userId) => dispatch(getUser(userId))
+  getAllPlaylists: () => dispatch(getAllPlaylists())
 });
 
 export default connect(mSTP, mDTP)(PlaylistShowAll);

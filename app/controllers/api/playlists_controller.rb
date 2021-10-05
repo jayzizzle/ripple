@@ -1,7 +1,7 @@
 class Api::PlaylistsController < ApplicationController
 
   def index
-    @playlists = Playlist.all
+    @playlists = current_user.playlists
     render '/api/playlists/index'
   end
 
