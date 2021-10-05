@@ -27,7 +27,7 @@ class PlaylistsRow extends React.Component {
             </li>
           ))}
           <li className='data-box'> 
-            <Link className='line-hover'to={`/playlists/new`}>
+            <Link className='line-hover'to='/playlists/new'>
               <div className='color-box'>+</div>
               <h5>Add New Playlist</h5>
             </Link>

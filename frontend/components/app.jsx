@@ -22,11 +22,11 @@ import PlaylistDisplay from './dashboard/playlists/playlist_display';
 const App = () => (
   <div className='full-wrapper'>
     <Switch>
+      <ProtectedRoute exact path='/playlists/new' component={PlaylistCreateFormContainer} />
       <ProtectedRoute path='/playlists/:playlistId/edit' component={PlaylistEditFormContainer} />
       <ProtectedRoute path='/playlists/:playlistId/' component={PlaylistDisplay} />
       <ProtectedRoute path='/albums/:albumId' component={AlbumDisplay} />
       <ProtectedRoute path='/artists/:artistId' component={ArtistDisplay} />
-      <ProtectedRoute exact path='/playlists/new' component={PlaylistCreateFormContainer} />
       <ProtectedRoute exact path='/playlists' component={PlaylistShowAllContainer} />
       <AuthRoute exact path='/login' component={LoginFormContainer} />
       <AuthRoute exact path='/signup' component={SignupFormContainer} />

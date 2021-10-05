@@ -1,6 +1,7 @@
 import {
   RECEIVED_ALL_PLAYLISTS,
-  RECEIVED_PLAYLIST
+  RECEIVED_PLAYLIST,
+  REMOVED_PLAYLIST
 } from '../../actions/playlist_actions';
 import { RECEIVED_CURRENT_USER } from '../../actions/session_actions';
 
@@ -13,6 +14,9 @@ const playlistsReducer = (oldState={}, action) => {
       return newState;
     case RECEIVED_ALL_PLAYLISTS:
       return action.playlists;
+    case REMOVED_PLAYLIST:
+      delete newState[action.playlistId];
+      return newState;
     default:
       return oldState;
   }

@@ -6,7 +6,9 @@ json.set! 'tracks' do
   tracks.each do |track|
     json.set! track.id do
       json.extract! track, :id, :title, :seconds
+      json.artistId track.artist_id
       json.artistName track.artist.artist_name
+      json.albumId track.album_id
       json.albumTitle track.album.title
     end
   end

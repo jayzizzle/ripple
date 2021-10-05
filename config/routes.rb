@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
     resources :tracks, only: [:index, :show]
     
-    resources :playlists
+    resources :playlists, only: [:index, :create, :show, :update, :destroy]
     resources :playlist_tracks
 
     resources :genre, only: [:index, :show]
