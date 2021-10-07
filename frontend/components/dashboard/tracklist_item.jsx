@@ -46,6 +46,7 @@ class TrackListItem extends React.Component {
                 deleteTrackLike={deleteTrackLike} 
                 likedTracks={likedTracks}
                 trackId={track.id}
+                key={track.id}
               />
             </div>
           </div>

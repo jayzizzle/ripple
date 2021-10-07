@@ -3,17 +3,33 @@ import React from 'react';
 class TrackLikeButton extends React.Component {
   constructor(props) {
     super(props);
+    this.handleClick = this.handleClick.bind(this);
+    this.isLiked = !!this.props.likedTracks[this.props.trackId]
+    this.state = {liked: this.isLiked }
   }
 
   toggleHeart() {
-    Object.values(this.props.likedTracks)
+    if (!!this.props.likedTracks[this.props.trackId]) {
+      return 'fas fa-heart';
+    } else {
+      return 'far fa-heart';
+    }
+  }
+
+  handleClick(e) {
+    e.stopPropagation();
+    const { currentUserId, postTrackLike, deleteTrackLike, likedTracks, trackId } = this.props;
+    if (!!likedTracks[trackId]) {
+      deleteTrackLike(likedTracks[trackId]);
+    } else {
+      postTrackLike({userId: currentUserId, trackId: trackId});
+    }
   }
 
   render() {
-    const { currentUserId, postTrackLike, deleteTrackLike, likedTracks, trackId } = this.props;
     return(
-      <button className='button-small'>
-        <i className="far fa-heart"></i>
+      <button onClick={this.handleClick} className='button-small'>
+        <i className={this.toggleHeart()}></i>
       </button>
     )
   }

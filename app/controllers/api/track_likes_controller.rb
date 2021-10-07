@@ -36,7 +36,7 @@ class Api::TrackLikesController < ApplicationController
 
   private
   def track_likes_params
-    params.require(:track_likes).permit(:user_id, :track_id)
+    params.require(:track_like).permit(:user_id, :track_id)
   end
 
 end
