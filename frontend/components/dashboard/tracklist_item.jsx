@@ -1,6 +1,7 @@
 import React from 'react';
 import {convertDuration} from '../../util/helper_util';
 import { Link } from 'react-router-dom';
+import AddToPlaylist from '../buttons/add_to_playlist';
 
 class TrackListItem extends React.Component {
   constructor(props) {
@@ -8,7 +9,7 @@ class TrackListItem extends React.Component {
   }
   
   render() {
-    const { album, tracks } = this.props;
+    const { album, tracks, currentUserId, postPlaylistTrack, playlists } = this.props;
     return(
       <>
         {tracks.map(track => (
@@ -35,7 +36,8 @@ class TrackListItem extends React.Component {
               <p>{convertDuration(track.seconds)}</p>
             </div>
             <div className='flex-row-end track-col more-col'>
-              <button className='button-small'><i className="fas fa-plus"></i></button>&nbsp;
+              <AddToPlaylist currentUserId={currentUserId} trackId={track.id} postPlaylistTrack={postPlaylistTrack} playlists={playlists} />&nbsp;
+              {/* <button className='button-small'><i className="fas fa-plus"></i></button>&nbsp; */}
               <button className='button-small'><i className="far fa-heart"></i></button>
             </div>
           </div>

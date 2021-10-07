@@ -9,6 +9,7 @@ class AlbumShow extends React.Component {
 
   componentDidMount() {
     this.props.getAlbum(this.props.match.params.albumId)
+    this.props.getAllPlaylists();
   }
 
   componentDidUpdate(prevProps) {
@@ -19,7 +20,7 @@ class AlbumShow extends React.Component {
 
   render() {
     if (!this.props.album || !this.props.album.tracks) return null;
-    const { album } = this.props;
+    const { album, currentUserId, playlists, postPlaylistTrack } = this.props;
     const tracks = Object.values(album.tracks);
     return(
       <div className='main-window'>
@@ -49,7 +50,7 @@ class AlbumShow extends React.Component {
             <p></p>
           </div>
         </div>
-        <TrackListItem album={album} tracks={tracks}/>
+        <TrackListItem album={album} tracks={tracks} currentUserId={currentUserId} postPlaylistTrack={postPlaylistTrack} playlists={playlists} />
       </div>
     )
   }

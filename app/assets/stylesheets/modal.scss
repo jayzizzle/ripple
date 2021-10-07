@@ -1,0 +1,100 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+  padding-left: 200px;
+  padding-bottom: 400px;
+  border-radius: 5px;
+}
+
+.modal.show {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.modal-content {
+  width: 200px;
+  background-color: #555;
+  // position: absolute;
+  // left: 50%;
+  // top: 50%; 
+  // margin-left: -150px;
+  // margin-top: -150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 5px;
+}
+
+.modal-header, .modal-footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  background-color: #333;
+  height: 40px;
+}
+
+// .modal-title {
+// }
+
+.modal-body {
+  // padding: 20px;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  width: 100%;
+}
+
+// .playlist-ul {
+// }
+
+.playlist-btn {
+  width: 100%;
+  text-align: left;
+  padding: 10px 20px;
+  border: none;
+  background-color: #555;
+  color: #fff;
+}
+
+.playlist-btn:hover {
+  background-color: cyan;
+  color: #333;
+  transition: 0.5s;
+}
+
+.modal-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 0px 20px;
+}
+
+.close-btn {
+  width: 100%;
+  text-align: left;
+  padding: 10px 20px;
+  border: none;
+  background-color: #555;
+  color: cyan;
+}
+
+.close-btn:hover {
+  background-color: darkred;
+  transition: 0.5s;
+  color: #fff;
+}
+
