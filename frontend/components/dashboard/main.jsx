@@ -6,7 +6,16 @@ class Main extends React.Component {
 
   componentDidMount() {
     this.props.getUser(this.props.userId);
-    this.props.getAllAlbums();
+    if (Object.keys(this.props.albums).length === 0){
+      this.props.getAllAlbums().then(albums => {
+        // debugger
+        Object.values(albums.albums).forEach(album => {
+          if (album.coverUrl === '') {
+            this.props.getAlbum(album.id)
+          }
+        }
+        )}
+      );}
     this.props.getAllArtists();
   }
 
