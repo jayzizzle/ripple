@@ -3,6 +3,7 @@ import {
   RECEIVED_TRACK_LIKE,
   REMOVED_TRACK_LIKE
 } from '../../actions/like_actions';
+import { RECEIVED_CURRENT_USER } from '../../actions/session_actions';
 
 const likedTracksReducer = (oldState={}, action) => {
   Object.freeze(oldState);
@@ -16,6 +17,8 @@ const likedTracksReducer = (oldState={}, action) => {
     case REMOVED_TRACK_LIKE:
       delete newState[action.trackLikeId];
       return newState;
+    case RECEIVED_CURRENT_USER:
+      return {...oldState, ...action.currentUser.likedTracks}
     default:
       return oldState;
   }

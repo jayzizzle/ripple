@@ -3,6 +3,8 @@ import {
   RECEIVED_ALBUM_LIKE,
   REMOVED_ALBUM_LIKE
 } from '../../actions/like_actions';
+import { RECEIVED_CURRENT_USER } from '../../actions/session_actions';
+
 
 const likedAlbumsReducer = (oldState={}, action) => {
   Object.freeze(oldState);
@@ -16,6 +18,8 @@ const likedAlbumsReducer = (oldState={}, action) => {
     case REMOVED_ALBUM_LIKE:
       delete newState[action.albumLikeId];
       return newState;
+    case RECEIVED_CURRENT_USER:
+      return {...oldState, ...action.currentUser.likedAlbums}
     default:
       return oldState;
   }

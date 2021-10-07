@@ -5,9 +5,12 @@ class TrackLikeButton extends React.Component {
     super(props);
   }
 
-  
+  toggleHeart() {
+    Object.values(this.props.likedTracks)
+  }
 
   render() {
+    const { currentUserId, postTrackLike, deleteTrackLike, likedTracks, trackId } = this.props;
     return(
       <button className='button-small'>
         <i className="far fa-heart"></i>
