@@ -4,9 +4,9 @@ json.extract! @user, :id, :username
 # json.albumsLiked @user.albums_liked.ids
 # json.albumLikes @user.album_likes
 
-json.set! 'albumLikes' do
-     json.array! @user.album_likes, :id, :album_id
-end
+# json.set! 'albumLikes' do
+#      json.array! @user.album_likes, :id, :album_id
+# end
 
 #if !!current_user
  # json.set! 'playlists' do

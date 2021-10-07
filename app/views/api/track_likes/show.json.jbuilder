@@ -1,1 +1,1 @@
-json.extract! :id, :track_id
+json.extract! @track_like, :id, :track_id

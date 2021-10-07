@@ -17,10 +17,10 @@ Rails.application.routes.draw do
 
     resources :genre, only: [:index, :show]
 
-    resources :album_likes, only: [:create, :destroy]
-    delete '/album_likes', to: 'album_likes#destroy'
-    resources :track_likes, only: [:create, :destroy]
-    delete '/album_likes', to: 'track_likes#destroy'
+    resources :album_likes, only: [:create, :destroy, :show, :index]
+    # delete '/album_likes', to: 'album_likes#destroy'
+    resources :track_likes, only: [:create, :destroy, :show, :index]
+    # delete '/album_likes', to: 'track_likes#destroy'
 
     resources :follows, only: [:create, :destroy]
 
