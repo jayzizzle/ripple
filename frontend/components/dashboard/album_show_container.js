@@ -10,7 +10,7 @@ const mSTP = (state, ownProps) => ({
   album: state.entities.albums[ownProps.match.params.albumId],
   currentUserId: state.session.id,
   playlists: Object.values(state.entities.playlists),
-  likedTracks: state.entities.likedTracks
+  likedTracks: Object.entries(state.entities.likedTracks).reduce((acc, [key, value]) => (acc[value] = key, acc), {})
 });
 
 const mDTP = dispatch => ({

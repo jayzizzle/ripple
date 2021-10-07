@@ -6,17 +6,29 @@ json.extract! @user, :id, :username
 
 json.set! 'likedTracks' do
   @user.track_likes.each do |track_like|
-    trackId = track_like.track_id
-    json.set! trackId, track_like.id
+    json.set! track_like.id, track_like.track_id
   end
 end
 
 json.set! 'likedAlbums' do
   @user.album_likes.each do |album_like|
-    albumId = album_like.album_id
-    json.set! albumId, album_like.id
+    json.set! album_like.id, album_like.album_id
   end
 end
+
+#json.set! 'likedTracks' do
+#  @user.track_likes.each do |track_like|
+#    trackId = track_like.track_id
+#    json.set! trackId, track_like.id
+#  end
+#end
+
+#json.set! 'likedAlbums' do
+#  @user.album_likes.each do |album_like|
+#    albumId = album_like.album_id
+#    json.set! albumId, album_like.id
+#  end
+#end
 
 
 

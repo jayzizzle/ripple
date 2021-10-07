@@ -6,6 +6,7 @@ class TrackLikeButton extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.isLiked = !!this.props.likedTracks[this.props.trackId]
     this.state = {liked: this.isLiked }
+    console.log(this.props.likedTracks)
   }
 
   toggleHeart() {
@@ -17,12 +18,13 @@ class TrackLikeButton extends React.Component {
   }
 
   handleClick(e) {
-    e.stopPropagation();
     const { currentUserId, postTrackLike, deleteTrackLike, likedTracks, trackId } = this.props;
     if (!!likedTracks[trackId]) {
       deleteTrackLike(likedTracks[trackId]);
+      this.forceUpdate();
     } else {
       postTrackLike({userId: currentUserId, trackId: trackId});
+      this.forceUpdate();
     }
   }
 

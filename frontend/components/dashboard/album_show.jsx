@@ -32,7 +32,9 @@ class AlbumShow extends React.Component {
               Play
           </button>&nbsp;
           <button className='button-gray-large'><i className="fas fa-random"></i>&nbsp;Shuffle</button>&nbsp;
+
           <button className='button-small'><i className="far fa-heart"></i></button>
+          
         </div>
         <div className='flex-row-between full-width col-heading'>
           <div className='flex-row-end track-col track-num-col'>

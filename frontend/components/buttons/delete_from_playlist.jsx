@@ -9,7 +9,6 @@ class DeleteFromPlaylist extends React.Component {
 
   handleClick(e) {
     e.preventDefault();
-    console.log(this.props);
     this.props.deletePlaylistTrack(this.props.playlistTrackId).then(() =>
       this.props.getPlaylist(this.props.playlistId)
     )

@@ -12,7 +12,7 @@ const likedTracksReducer = (oldState={}, action) => {
     case RECEIVED_ALL_TRACK_LIKES:
       return {...oldState, ...action.trackLikes}
     case RECEIVED_TRACK_LIKE:
-      newState[action.trackLike.id] = action.trackLike;
+      newState[action.trackLike.id] = action.trackLike.trackId;
       return newState;
     case REMOVED_TRACK_LIKE:
       delete newState[action.trackLikeId];
