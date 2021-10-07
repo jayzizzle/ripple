@@ -2,6 +2,7 @@ import React from 'react';
 import {convertDuration} from '../../util/helper_util';
 import { Link } from 'react-router-dom';
 import AddToPlaylist from '../buttons/add_to_playlist';
+import TrackLikeButton from '../buttons/track_like_button';
 
 class TrackListItem extends React.Component {
   constructor(props) {
@@ -38,7 +39,8 @@ class TrackListItem extends React.Component {
             <div className='flex-row-end track-col more-col'>
               <AddToPlaylist currentUserId={currentUserId} trackId={track.id} postPlaylistTrack={postPlaylistTrack} playlists={playlists} />&nbsp;
               {/* <button className='button-small'><i className="fas fa-plus"></i></button>&nbsp; */}
-              <button className='button-small'><i className="far fa-heart"></i></button>
+              {/* <button className='button-small'><i className="far fa-heart"></i></button> */}
+              <TrackLikeButton/>
             </div>
           </div>
         ))}

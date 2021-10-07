@@ -4,6 +4,7 @@ import {
   REMOVED_PLAYLIST
 } from '../../actions/playlist_actions';
 import { RECEIVED_CURRENT_USER } from '../../actions/session_actions';
+import { REMOVED_PLAYLIST_TRACK } from '../../actions/playlist_track_actions';
 
 const playlistsReducer = (oldState={}, action) => {
   Object.freeze(oldState);

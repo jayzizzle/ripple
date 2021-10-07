@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { convertDuration } from '../../../util/helper_util';
+import DeleteFromPlaylist from '../../buttons/delete_from_playlist';
 
 class PlaylistShow extends React.Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class PlaylistShow extends React.Component {
 
   render() {
     if (!this.props.playlist || !this.props.playlist.tracks) return null;
-    const { playlist } = this.props;
+    const { playlist, deletePlaylistTrack } = this.props;
     const tracks = Object.values(playlist.tracks);
     return(
       <div className='main-window'>
@@ -90,8 +91,14 @@ class PlaylistShow extends React.Component {
               <p>{convertDuration(track.seconds)}</p>
             </div>
             <div className='flex-row-end track-col more-col'>
-              <button className='button-small'><i className="fas fa-minus"></i></button>&nbsp;
-              <button className='button-small'><i className="fas fa-plus"></i></button>&nbsp;
+              {/* <button className='button-small'><i className="fas fa-minus"></i></button>&nbsp; */}
+              {/* <button className='button-small'><i className="fas fa-plus"></i></button>&nbsp; */}
+              <DeleteFromPlaylist 
+                playlistTrackId={track.playlistTrackId}
+                deletePlaylistTrack={deletePlaylistTrack}
+                playlistId={playlist.id}
+                getPlaylist={this.props.getPlaylist}
+              />
               <button className='button-small'><i className="far fa-heart"></i></button>
             </div>
           </div>

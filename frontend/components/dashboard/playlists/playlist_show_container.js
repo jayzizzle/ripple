@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { getPlaylist } from '../../../actions/playlist_actions';
 import PlaylistShow from './playlist_show';
+import { deletePlaylistTrack } from '../../../actions/playlist_track_actions';
 
 const mSTP = (state, ownProps) => ({
   playlist: state.entities.playlists[ownProps.match.params.playlistId],
@@ -9,7 +10,8 @@ const mSTP = (state, ownProps) => ({
 });
 
 const mDTP = dispatch => ({
-  getPlaylist: (playlistId) => dispatch(getPlaylist(playlistId))
+  getPlaylist: (playlistId) => dispatch(getPlaylist(playlistId)),
+  deletePlaylistTrack: (playlistTrackId) => dispatch(deletePlaylistTrack(playlistTrackId))
 });
 
 export default withRouter(connect(mSTP, mDTP)(PlaylistShow))

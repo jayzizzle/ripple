@@ -11,11 +11,8 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by(id: params[:id])
-    # @playlists = Playlist.includes(:tracks).where(user_id: params[:id])
+    @user = User.includes(:tracks_liked, :albums_liked).find_by(id: params[:id])
     if @user
-      
-      # @playlists = Playlist.includes().find_by(user_id: params[:id])
       render '/api/users/show'
     else
       render json: ['This user does not exist.'], status: 404

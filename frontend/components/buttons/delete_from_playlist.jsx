@@ -1,22 +1,27 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { deletePlaylistTrack } from '../../actions/playlist_track_actions'
 
 class DeleteFromPlaylist extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
+    // this.deletePlaylistTrack = this.props.deletePlaylistTrack.bind(this);
   }
 
   handleClick(e) {
-    deletePlaylistTrack(this.props.playListTrackId)
+    e.preventDefault();
+    console.log(this.props);
+    this.props.deletePlaylistTrack(this.props.playlistTrackId).then(() =>
+      this.props.getPlaylist(this.props.playlistId)
+    )
   }
 
   render() {
-    <button onClick={this.handleClick} className='button-small'>
-      <i className="fas fa-minus"></i>
-    </button>
+    return(
+      <button onClick={this.handleClick} className='button-small'>
+        <i className="fas fa-minus"></i>
+      </button>
+    )
   }
 }
 
-export default withRouter(DeleteFromPlaylist);
+export default DeleteFromPlaylist;

@@ -17,7 +17,7 @@ class Api::PlaylistTracksController < ApplicationController
   end
 
   def destroy
-    @playlist_track = Playlist.find_by(id: params[:id])
+    @playlist_track = PlaylistTrack.find_by(id: params[:id])
     if @playlist_track.destroy
       render 'api/playlists/show'
     else
