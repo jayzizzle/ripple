@@ -281,41 +281,6 @@ label {
   align-items: flex start;
 }
 
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 100%;
-  padding: 20px;
-  font-size: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background: linear-gradient(215deg,#1a1a1a 15%,#222 85%) no-repeat 50% fixed;
-  z-index: 2;
-  // background-color: #242528;
-}
-
-.sidebar-link {
-  width: 195px;
-  border-radius: 2%;
-  padding: 2px;
-  margin: 5px 0px;
-  border: none;
-  background-color: none;
-  display: block;
-}
-
-.sidebar-link:hover {
-  background-color: #333;
-}
-
-.menu-icon {
-  padding: 10px 20px 10px 10px;
-  width: 15px;
-}
-
 .main-window {
   display: flex;
   flex-direction: column;
@@ -583,4 +548,8 @@ label {
 
 .pl-album-col {
   width: 25%
+}
+
+a.sidebar-selected {
+  color: cyan;
 }

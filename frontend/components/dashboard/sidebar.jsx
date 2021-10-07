@@ -8,15 +8,107 @@ class Sidebar extends React.Component {
     const { username, isLoggedIn, logout } = this.props;
     return(
       <div className='sidebar'>
-        <div className='inline-block'>
-        <h5><i className="fas fa-user-ninja"></i>{username}</h5>
-        <NavLink className='sidebar-link' to='/dashboard'>Home</NavLink>
-        <NavLink className='sidebar-link' to='/playlists'><i className="fas fa-list-alt menu-icon"></i>Playlists</NavLink>
-        <NavLink className='sidebar-link' to='/albums'><i className="fas fa-compact-disc menu-icon"></i>Albums</NavLink>
-        <NavLink className='sidebar-link' to='/tracks'><i className="fas fa-music menu-icon"></i>Tracks</NavLink>
-        <NavLink className='sidebar-link' to='/dashboard/artists'><i className="fas fa-microphone menu-icon"></i>Artists</NavLink>
-        <LogoutButton />
+
+        <div className='sidebar-row'>
+          <div className='sidebar-left-col'>
+            <i className="fas fa-portrait"></i>
+          </div>
+          <div className='sidebar-center-col'>
+            <p className='sidebar-username'>{username}</p>
+          </div>
+          <div className='sidebar-right-col'>
+            <LogoutButton />
+          </div>
         </div>
+        <div className='sidebar-row margin-top'>
+          <NavLink className='sidebar-link' to='/dashboard' activeClassName='sidebar-selected'>Home</NavLink>
+        </div>
+
+        <div className='sidebar-break'>
+          <p className='sidebar-heading'>My Collection</p>
+        </div>
+
+        <NavLink className='sidebar-link' to='/playlists' activeClassName='sidebar-selected'>
+        <div className='sidebar-row'>
+          <div className='sidebar-left-col'>
+            <i className="fas fa-list-alt"></i>
+          </div>
+          <div className='sidebar-center-col'>
+            <p>Playlists</p>
+          </div>
+        </div>
+        </NavLink>
+
+        <NavLink className='sidebar-link' to='/albums' activeClassName='sidebar-selected'>
+        <div className='sidebar-row'>
+          <div className='sidebar-left-col'>
+            <i className="fas fa-compact-disc"></i>
+          </div>
+          <div className='sidebar-center-col'>
+            <p>Albums</p>
+          </div>
+        </div>
+        </NavLink>
+
+        <NavLink className='sidebar-link' to='/tracks' activeClassName='sidebar-selected'>
+        <div className='sidebar-row'>
+          <div className='sidebar-left-col'>
+            <i className="fas fa-music menu-icon"></i>
+          </div>
+          <div className='sidebar-center-col'>
+            <p>Tracks</p>
+          </div>
+        </div>
+        </NavLink>
+
+        <NavLink className='sidebar-link' to='/artists' activeClassName='sidebar-selected'>
+        <div className='sidebar-row'>
+          <div className='sidebar-left-col'>
+            <i className="fas fa-microphone menu-icon"></i>
+          </div>
+          <div className='sidebar-center-col'>
+            <p>Artists</p>
+          </div>
+        </div>
+        </NavLink>
+
+        <div className='sidebar-break margin-top'>
+          <p className='sidebar-heading'>Developer Links</p>
+        </div>
+
+        <a className='sidebar-link' href='http://github.com/jayzizzle' _target='blank'>
+        <div className='sidebar-row'>
+          <div className='sidebar-left-col'>
+            <i className="fab fa-github"></i>
+          </div>
+          <div className='sidebar-center-col'>
+            <p>GitHub</p>
+          </div>
+        </div>
+        </a>
+
+        <a className='sidebar-link' href='https://linkedin.com/in/jon-zamora-97a8a6219/' _target='blank'>
+        <div className='sidebar-row'>
+          <div className='sidebar-left-col'>
+            <i className="fab fa-linkedin"></i>
+          </div>
+          <div className='sidebar-center-col'>
+            <p>LinkedIn</p>
+          </div>
+        </div>
+        </a>
+
+        <a className='sidebar-link' href='http://mixcloud.com/jonzamora' _target='blank'>
+        <div className='sidebar-row'>
+          <div className='sidebar-left-col'>
+            <i className="fas fa-headphones"></i>
+          </div>
+          <div className='sidebar-center-col'>
+            <p>Mixcloud</p>
+          </div>
+        </div>
+        </a>
+
       </div>
     )
   }

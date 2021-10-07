@@ -6,18 +6,26 @@ class Main extends React.Component {
 
   componentDidMount() {
     this.props.getUser(this.props.userId);
-    if (Object.keys(this.props.albums).length === 0){
-      this.props.getAllAlbums().then(albums => {
-        // debugger
-        Object.values(albums.albums).forEach(album => {
-          if (album.coverUrl === '') {
-            this.props.getAlbum(album.id)
-          }
-        }
-        )}
-      );}
+    this.props.getAllAlbums();
     this.props.getAllArtists();
   }
+
+  // THIS ERRORS ON LOCAL
+  
+  // componentDidMount() {
+  //   this.props.getUser(this.props.userId);
+  //   if (Object.keys(this.props.albums).length === 0){
+  //     this.props.getAllAlbums().then(albums => {
+  //       // debugger
+  //       Object.values(albums.albums).forEach(album => {
+  //         if (album.coverUrl === '') {
+  //           this.props.getAlbum(album.id)
+  //         }
+  //       }
+  //       )}
+  //     );}
+  //   this.props.getAllArtists();
+  // }
 
   render() {
     if (!this.props) return null;
