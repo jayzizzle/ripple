@@ -255,13 +255,13 @@ pop = Genre.create(title: 'Pop')
 
 playlist1 = Playlist.create(
     title: 'Featured',
-    user_id: 1,
+    user_id: spidey.id,
     is_public: true
 )
 
 playlist2 = Playlist.create(
     title: 'Breakouts',
-    user_id: 1
+    user_id: spidey.id
 )
 
 feat_track1 = PlaylistTrack.create(
@@ -302,17 +302,17 @@ play_track3 = PlaylistTrack.create(
 
 follows1 = Follow.create(
     artist_id: wolftyla.id,
-    user_id: 1
+    user_id: spidey.id
 )
 
 follows3 = Follow.create(
     artist_id: kehlani.id,
-    user_id: 1
+    user_id: spidey.id
 )
 
 album_like3 = AlbumLike.create(
     album_id: wolf_in_color.id,
-    user_id: 1
+    user_id: spidey.id
 )
 
 tt07 = TopTrack.create(
