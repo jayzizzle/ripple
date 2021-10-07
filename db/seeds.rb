@@ -6,18 +6,18 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.destroy_all
-Artist.destroy_all
-Album.destroy_all
-Track.destroy_all
-Playlist.destroy_all
-PlaylistTrack.destroy_all
-Genre.destroy_all
-GenreTrack.destroy_all
-Follow.destroy_all
-AlbumLike.destroy_all
-TrackLike.destroy_all
 
+TrackLike.destroy_all
+AlbumLike.destroy_all
+Follow.destroy_all
+GenreTrack.destroy_all
+Genre.destroy_all
+PlaylistTrack.destroy_all
+Playlist.destroy_all
+Track.destroy_all
+Album.destroy_all
+Artist.destroy_all
+User.destroy_all
 require 'open-uri'
 
 spidey = User.create(username: 'spidey', email: 'spidey@marvel.com', password: 'parker')
