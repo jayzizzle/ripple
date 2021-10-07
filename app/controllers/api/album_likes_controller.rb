@@ -36,7 +36,7 @@ class Api::AlbumLikesController < ApplicationController
 
   private
   def album_likes_params
-    params.require(:album_likes).permit(:user_id, :album_id)
+    params.require(:album_like).permit(:user_id, :album_id)
   end
 
 end

@@ -5,8 +5,6 @@ class TrackLikeButton extends React.Component {
     super(props);
     this.handleClick = this.handleClick.bind(this);
     this.isLiked = !!this.props.likedTracks[this.props.trackId]
-    this.state = {liked: this.isLiked }
-    console.log(this.props.likedTracks)
   }
 
   toggleHeart() {

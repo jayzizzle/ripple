@@ -1,6 +1,7 @@
 import React from 'react';
 import TrackListItem from './tracklist_item';
 import AlbumHeader from './album_header';
+import AlbumLikeButton from '../buttons/album_like_button';
 
 class AlbumShow extends React.Component {
   constructor(props) {
@@ -21,7 +22,10 @@ class AlbumShow extends React.Component {
 
   render() {
     if (!this.props.album || !this.props.album.tracks) return null;
-    const { album, currentUserId, playlists, postPlaylistTrack, postTrackLike, deleteTrackLike, likedTracks } = this.props;
+    const { album, currentUserId, playlists, postPlaylistTrack, 
+      postTrackLike, deleteTrackLike, likedTracks,
+      postAlbumLike, deleteAlbumLike, likedAlbums 
+    } = this.props;
     const tracks = Object.values(album.tracks);
     return(
       <div className='main-window'>
@@ -33,8 +37,14 @@ class AlbumShow extends React.Component {
           </button>&nbsp;
           <button className='button-gray-large'><i className="fas fa-random"></i>&nbsp;Shuffle</button>&nbsp;
 
-          <button className='button-small'><i className="far fa-heart"></i></button>
-          
+          {/* <button className='button-small'><i className="far fa-heart"></i></button> */}
+          <AlbumLikeButton 
+            albumId={album.id} 
+            currentUserId={currentUserId} 
+            postAlbumLike={postAlbumLike} 
+            deleteAlbumLike={deleteAlbumLike}
+            likedAlbums={likedAlbums}
+          /> 
         </div>
         <div className='flex-row-between full-width col-heading'>
           <div className='flex-row-end track-col track-num-col'>
