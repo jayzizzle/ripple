@@ -81,7 +81,7 @@ class Sidebar extends React.Component {
           <p className='sidebar-heading'>Developer Links</p>
         </div>
 
-        <a className='sidebar-link' href='http://github.com/jayzizzle' _target='blank'>
+        <a className='sidebar-link' href='http://github.com/jayzizzle' target='_blank'>
         <div className='sidebar-row'>
           <div className='sidebar-left-col'>
             <i className="fab fa-github"></i>
@@ -92,7 +92,7 @@ class Sidebar extends React.Component {
         </div>
         </a>
 
-        <a className='sidebar-link' href='https://linkedin.com/in/jon-zamora-97a8a6219/' _target='blank'>
+        <a className='sidebar-link' href='https://linkedin.com/in/jon-zamora-97a8a6219/' target='_blank'>
         <div className='sidebar-row'>
           <div className='sidebar-left-col'>
             <i className="fab fa-linkedin"></i>
@@ -103,7 +103,7 @@ class Sidebar extends React.Component {
         </div>
         </a>
 
-        <a className='sidebar-link' href='http://mixcloud.com/jonzamora' _target='blank'>
+        <a className='sidebar-link' href='http://mixcloud.com/jonzamora' target='_blank'>
         <div className='sidebar-row'>
           <div className='sidebar-left-col'>
             <i className="fas fa-headphones"></i>
