@@ -29,11 +29,14 @@ Users can create new playlists and add and subtract to them as they like while b
  
 ## Development Information
 
-### Designed With
+### Technologies Used
 
-* React/Redux
-* Rails
-
+BackEnd | Frontend
+---|:--
+Ruby on Rails | React
+PostgreSQL | Redux
+AWS S3 | JavaScript ES6
+jbuilder | 
 ### Notable Code Snippets
 
 ```javascript
