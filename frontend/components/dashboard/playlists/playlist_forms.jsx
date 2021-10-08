@@ -9,6 +9,7 @@ const PlaylistForms = () => (
     <Sidebar />
     <PlaylistCreateFormContainer />
     <Player />
+    <div className='end-clear'></div>
   </>
 )
 

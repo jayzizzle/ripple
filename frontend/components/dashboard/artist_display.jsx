@@ -9,6 +9,7 @@ const ArtistDisplay = () => (
     <Sidebar />
     <ArtistShowContainer />
     <Player />
+    <div className='end-clear'></div>
   </>
 )
 

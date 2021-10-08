@@ -1,7 +1,7 @@
 class Api::AlbumsController < ApplicationController
 
   def index
-    @albums = Album.with_attached_cover.select('*').joins(:artist)
+    @albums = Album.all.with_attached_cover.joins(:artist)
     render '/api/albums/index'
   end
 

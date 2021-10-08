@@ -9,6 +9,7 @@ const AlbumDisplay = () => (
     <Sidebar />
     <AlbumShowContainer />
     <Player />
+    <div className='end-clear'></div>
   </>
 )
 

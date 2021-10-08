@@ -9,6 +9,7 @@ const FavoriteAlbums = () => (
     <Sidebar />
     <AlbumFavesContainer />
     <Player />
+    <div className='end-clear'></div>
   </>
 )
 

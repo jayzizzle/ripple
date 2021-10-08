@@ -9,6 +9,7 @@ const Dashboard = () => (
     <Sidebar />
     <MainContainer />
     <Player />
+    <div className='end-clear'></div>
   </>
 )
 

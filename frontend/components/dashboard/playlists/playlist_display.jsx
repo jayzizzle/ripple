@@ -9,6 +9,7 @@ const PlaylistDisplay = () => (
     <Sidebar />
     <PlaylistShowContainer />
     <Player />
+    <div className='end-clear'></div>
   </>
 )
 

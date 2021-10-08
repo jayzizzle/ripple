@@ -51,7 +51,7 @@ class Sidebar extends React.Component {
         </div>
         </NavLink>
 
-        <NavLink className='sidebar-link' to='/tracks' activeClassName='sidebar-selected'>
+        {/* <NavLink className='sidebar-link' to='/tracks' activeClassName='sidebar-selected'>
         <div className='sidebar-row'>
           <div className='sidebar-left-col'>
             <i className="fas fa-music menu-icon"></i>
@@ -60,7 +60,11 @@ class Sidebar extends React.Component {
             <p>Tracks</p>
           </div>
         </div>
-        </NavLink>
+        </NavLink> */}
+
+        <div className='sidebar-break'>
+          <p className='sidebar-heading'>Explore</p>
+        </div>
 
         <NavLink className='sidebar-link' to='/artists' activeClassName='sidebar-selected'>
         <div className='sidebar-row'>

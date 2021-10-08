@@ -10,7 +10,7 @@ class PlayerTrackInfo extends React.Component {
     return(
       <div className='player-track-info player-side'>
         <div className='player-cover-art'>
-          <img src={cover} />
+          {/* <img src={cover} /> */}
         </div>
         <div className='player-track-text'>
           <h5>{title}</h5>

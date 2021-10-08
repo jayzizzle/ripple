@@ -34,6 +34,7 @@ class Main extends React.Component {
       <div className='main-window'>
         <AlbumsRow albums={albums} />
         <ArtistsRow artists={artists} />
+        <div className='end-clear'></div>
       </div>
     )
   }

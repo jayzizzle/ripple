@@ -19,6 +19,7 @@ import {
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import PlaylistDisplay from './dashboard/playlists/playlist_display';
+import AllArtists from './dashboard/all_artists';
 
 const App = () => (
   <div className='full-wrapper'>
@@ -28,6 +29,7 @@ const App = () => (
       <ProtectedRoute path='/playlists/:playlistId/' component={PlaylistDisplay} />
       <ProtectedRoute path='/albums/:albumId' component={AlbumDisplay} />
       <ProtectedRoute path='/artists/:artistId' component={ArtistDisplay} />
+      <ProtectedRoute exact path='/artists' component={AllArtists} />
       <ProtectedRoute exact path='/albums' component={FavoriteAlbums} />
       <ProtectedRoute exact path='/playlists' component={PlaylistShowAllContainer} />
       <AuthRoute exact path='/login' component={LoginFormContainer} />
