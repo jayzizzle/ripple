@@ -20,9 +20,10 @@ class Sidebar extends React.Component {
             <LogoutButton />
           </div>
         </div>
-        <div className='sidebar-row margin-top'>
-          <NavLink className='sidebar-link' to='/dashboard' activeClassName='sidebar-selected'>Home</NavLink>
-        </div>
+        <div className='sidebar-break'></div>
+        <NavLink className='sidebar-link' to='/dashboard' activeClassName='sidebar-selected'>
+          <div className='sidebar-row'>Home</div>
+        </NavLink>
 
         <div className='sidebar-break'>
           <p className='sidebar-heading'>My Collection</p>

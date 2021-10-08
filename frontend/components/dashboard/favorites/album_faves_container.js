@@ -3,6 +3,7 @@ import { getUser } from '../../../actions/session_actions';
 import { getAllAlbums } from '../../../actions/album_actions';
 import { postAlbumLike, deleteAlbumLike } from '../../../actions/like_actions';
 import { withRouter } from 'react-router';
+import AlbumFaves from './album_faves';
 
 const mSTP = state => ({
   userId: state.session.id,
