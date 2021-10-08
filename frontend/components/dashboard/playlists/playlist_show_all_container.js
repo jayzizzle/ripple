@@ -5,7 +5,8 @@ import { getAllPlaylists } from '../../../actions/playlist_actions';
 
 const mSTP = (state, ownProps) => ({
   currentUserId: state.session.id,
-  playlists: Object.values(state.entities.playlists)
+  playlists: Object.values(state.entities.playlists),
+  users: state.entities.users
 });
 
 const mDTP = dispatch => ({

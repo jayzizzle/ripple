@@ -22,6 +22,7 @@ class PlaylistShow extends React.Component {
 
   render() {
     if (!this.props.playlist || !this.props.playlist.tracks) return null;
+    // if (!this.props.playlist) return null;
     const { playlist, deletePlaylistTrack } = this.props;
     const tracks = Object.values(playlist.tracks);
     return(

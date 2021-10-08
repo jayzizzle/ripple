@@ -12,7 +12,7 @@ class PlaylistsRow extends React.Component {
     const { playlists } = this.props;
     return(
       <>
-        <h4>Playlists</h4>
+        <h4>Your Playlists</h4>
         <ul className='data-display'>
           {playlists.map((playlist, i) => (
             <li className='data-box' key={i}> 
@@ -20,9 +20,9 @@ class PlaylistsRow extends React.Component {
                 <div className='color-box'>{playlist.title.slice(0, 2)}</div>
                 <h5>{playlist.title}</h5>
               </Link>
-              <h6>Created by: Me</h6>
-              <Link to={`/playlists/${playlist.id}/edit`}>
-                <p>Edit Playlist</p>
+              {/* <h6>Created by: </h6> */}
+              <Link className='hover-cyan' to={`/playlists/${playlist.id}/edit`}>
+                <p>Rename Playlist</p>
               </Link>
             </li>
           ))}
