@@ -8,6 +8,7 @@ import LoginFormContainer from './session/session_form/login_form_container';
 import SignupFormContainer from './session/session_form/signup_form_container';
 import PlaylistCreateFormContainer from './dashboard/playlists/playlist_create_form_container';
 import PlaylistEditFormContainer from './dashboard/playlists/playlist_edit_form_container';
+import FavoriteAlbums from './dashboard/favorites/favorite_albums';
 import {
   Route,
   Redirect,
@@ -27,6 +28,7 @@ const App = () => (
       <ProtectedRoute path='/playlists/:playlistId/' component={PlaylistDisplay} />
       <ProtectedRoute path='/albums/:albumId' component={AlbumDisplay} />
       <ProtectedRoute path='/artists/:artistId' component={ArtistDisplay} />
+      <ProtectedRoute exact path='/albums' component={FavoriteAlbums} />
       <ProtectedRoute exact path='/playlists' component={PlaylistShowAllContainer} />
       <AuthRoute exact path='/login' component={LoginFormContainer} />
       <AuthRoute exact path='/signup' component={SignupFormContainer} />

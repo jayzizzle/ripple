@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { convertDuration } from '../../../util/helper_util';
 import DeleteFromPlaylist from '../../buttons/delete_from_playlist';
+import TrackLikeButton from '../../buttons/track_like_button';
 
 class PlaylistShow extends React.Component {
   constructor(props) {
@@ -10,11 +11,12 @@ class PlaylistShow extends React.Component {
 
   componentDidMount() {
     this.props.getPlaylist(this.props.match.params.playlistId);
+    this.props.getUser(this.props.user_id);
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.match.params.playlistId !== prevProps.match.params.playlistId) {
-      this.props.getPlaylist(this.props.match.params.playlistId)
+      this.props.getPlaylist(this.props.match.params.playlistId);
     }
   }
 
@@ -38,7 +40,7 @@ class PlaylistShow extends React.Component {
               Play
           </button>&nbsp;
           <button className='button-gray-large top-margin'><i className="fas fa-random"></i>&nbsp;Shuffle</button>&nbsp;
-          <button className='button-small top-margin'><i className="far fa-heart"></i></button>
+          {/* <button className='button-small top-margin'><i className="far fa-heart"></i></button> */}
         </div>
         <div className='flex-row-between full-width col-heading'>
           <div className='flex-row-end track-col track-num-col'>
@@ -99,7 +101,13 @@ class PlaylistShow extends React.Component {
                 playlistId={playlist.id}
                 getPlaylist={this.props.getPlaylist}
               />
-              <button className='button-small'><i className="far fa-heart"></i></button>
+              <TrackLikeButton 
+                currentUserId={this.props.user_id} 
+                postTrackLike={this.props.postTrackLike} 
+                deleteTrackLike={this.props.deleteTrackLike} 
+                likedTracks={this.props.likedTracks}
+                trackId={track.id}
+              />
             </div>
           </div>
         ))}

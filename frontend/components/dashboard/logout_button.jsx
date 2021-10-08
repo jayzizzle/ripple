@@ -7,7 +7,7 @@ class LogOutButton extends React.Component {
     const { logout } = this.props;
     return(
       <button className='logout-button' onClick={() => logout()}>
-        <i class="fas fa-power-off"></i>
+        <i className="fas fa-power-off"></i>
       </button>
     )
   }

@@ -24,6 +24,8 @@ Rails.application.routes.draw do
 
     resources :follows, only: [:create, :destroy]
 
+    resources :favorite_albums, only: [:index]
+
   end
 
 end
